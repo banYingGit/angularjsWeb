@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {Slides} from 'ionic-angular';
+
+
 /**
  * Generated class for the IndexPage page.
  *
@@ -15,16 +17,31 @@ import {Slides} from 'ionic-angular';
 })
 export class IndexPage {
 
+
   @Component(Slides) slides: Slides;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
   }
+
+  tabBarP = {}
+  tabBar = {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad IndexPage');
+
+    var $w = document.body.clientWidth;
+
+    this.tabBarP = {
+      width: $w / 4 + 'px'
+    };
+    this.tabBar = {
+      width: $w / 4 * 6 + 'px'
+    };
+
+
   }
 
-  goToSlide() {
-    this.slides.slideTo(2, 500);
-  }
+  // goToSlide() {
+  //   this.slides.slideTo(2, 500);
+  // }
 }
