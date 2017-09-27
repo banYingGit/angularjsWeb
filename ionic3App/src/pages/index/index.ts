@@ -1,33 +1,60 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
 import {Slides} from 'ionic-angular';
 
+import 'rxjs/Rx';
+import {IndexPageModule} from './index.module';
+import {IndexService} from './index.service';
 
-/**
- * Generated class for the IndexPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
+
+
 @Component({
   selector: 'page-index',
-  templateUrl: 'index.html',
+  templateUrl: 'index.html'
 })
 export class IndexPage {
 
+  bannerData = [''];
+  newsData = [''];
+  tabBarP = {};
+  tabBar = {};
+  indexData = {};
+  loading: any;
+  index: IndexPageModule = new IndexPageModule();
 
   @Component(Slides) slides: Slides;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public indexService: IndexService,
+              public loadingCtrl: LoadingController) {
+
+    this.loading = this.loadingCtrl.create();
 
   }
 
-  tabBarP = {}
-  tabBar = {}
+  ionViewWillEnter() {
+
+    this.loading.present();
+    var $this = this;
+    /*获取banner*/
+    var bannerUrl = './assets/data/index/banner.json'
+    this.indexService
+      .getData(bannerUrl)
+      .then(function (data) {
+        $this.bannerData = data.images;
+        console.log('$this.bannerData ', $this.bannerData)
+        $this.loading.dismiss();
+        // $this.slides.loop = true;
+      });
+
+  }
 
   ionViewDidLoad() {
+
 
     var $w = document.body.clientWidth;
 
@@ -41,7 +68,4 @@ export class IndexPage {
 
   }
 
-  // goToSlide() {
-  //   this.slides.slideTo(2, 500);
-  // }
 }

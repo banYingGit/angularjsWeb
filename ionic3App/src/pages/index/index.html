@@ -6,19 +6,10 @@
 </ion-header>
 <ion-content padding>
   <div class="banner">
-    <ion-slides pager autoplay="2000" loop>
-      <ion-slide>
-        <div class="banner-img"><img src="../../assets/icon/cur/banner1.png"/></div>
+    <ion-slides pager autoplay="2000">
+      <ion-slide *ngFor="let  items of  bannerData">
+        <div class="banner-img">{{items}}<img [src]="items"/></div>
       </ion-slide>
-
-      <ion-slide>
-        <div class="banner-img"><img src="../../assets/icon/cur/banner2.png"/></div>
-      </ion-slide>
-
-      <ion-slide>
-        <div class="banner-img"><img src="../../assets/icon/cur/banner3.png"/></div>
-      </ion-slide>
-
     </ion-slides>
   </div>
   <div class="floor-1">
