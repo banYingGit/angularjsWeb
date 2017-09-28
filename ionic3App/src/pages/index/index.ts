@@ -18,11 +18,14 @@ export class IndexPage {
 
   bannerData = [''];
   newsData = [''];
-  tabBarP = {};
-  tabBar = {};
-  indexData = {};
+  tabBarData = [{}];
+  tabConData = [];
+  listData = []
   loading: any;
+  isTabActive = ''
   index: IndexPageModule = new IndexPageModule();
+
+  items = [];
 
   @Component(Slides) slides: Slides;
 
@@ -38,32 +41,91 @@ export class IndexPage {
 
   ionViewWillEnter() {
 
-    this.loading.present();
-    var $this = this;
-    /*获取banner*/
-    var bannerUrl = './assets/data/index/banner.json'
-    this.indexService
-      .getData(bannerUrl)
-      .then(function (data) {
-        $this.bannerData = data.images;
-        console.log('$this.bannerData ', $this.bannerData)
-        $this.loading.dismiss();
-        // $this.slides.loop = true;
-      });
+    // this.loading.present();
+    // $this.loading.dismiss();
+
 
   }
 
   ionViewDidLoad() {
 
+    var $this = this;
 
-    var $w = document.body.clientWidth;
+    /*获取banner*/
+    var bannerUrl = './assets/data/index/banner.json';
+    this.indexService
+      .getData(bannerUrl, '')
+      .then(function (data) {
+        $this.bannerData = data.items;
+      });
 
-    this.tabBarP = {
-      width: $w / 4 + 'px'
-    };
-    this.tabBar = {
-      width: $w / 4 * 6 + 'px'
-    };
+    /*获取头条*/
+    var newsUrl = './assets/data/index/news.json';
+    this.indexService
+      .getData(newsUrl, '')
+      .then(function (data) {
+        $this.newsData = data.items;
+      });
+
+    /*获取tab标签*/
+    var tabBarUrl = './assets/data/index/tabBar.json',
+      $w = document.body.clientWidth;
+    this.indexService
+      .getData(tabBarUrl, '')
+      .then(function (data) {
+        $this.tabBarData = data.itemsObj;
+        /*获取tab卡片*/
+        $this.tabConGet((data.itemsObj)[0].id)
+      });
+
+    this.listGet('1', '')
+  }
+
+  tabConGet(id) {
+
+    var $this = this;
+    /*点击获取tab卡片*/
+    var tabConUrl = './assets/data/index/tabCon.json';
+    this.indexService
+      .getData(tabConUrl, '')
+      .then(function (data) {
+        $this.tabConData = data.itemsObj;
+        $this.isTabActive = id
+        console.log('$this.isTabActive>>>', $this.isTabActive)
+      });
+  }
+
+  listGet(page, fn) {
+    var $this = this;
+    /*获取list列表内容*/
+    var listUrl = './assets/data/index/list.json';
+    this.indexService
+      .getData(listUrl, page)
+      .then(function (data) {
+        $this.listData = data.itemsObj;
+        fn && fn.call(this)
+      });
+
+  }
+
+  doRefresh(refresher) {
+
+    for (let i = 0; i < 10; i++) {
+      this.items.push(this.items.length);
+    }
+
+    console.log('》》》》》》》', refresher);
+
+    console.log('this.items', this.items)
+
+    // setTimeout(function () {
+    //
+    // }, 2000)
+    this.listGet('1', function () {
+
+      refresher.complete();
+
+    })
 
 
   }

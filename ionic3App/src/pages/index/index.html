@@ -5,10 +5,12 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
+
+
   <div class="banner">
-    <ion-slides pager autoplay="2000">
+    <ion-slides pager autoplay="2000" loop *ngIf="bannerData.length>0">
       <ion-slide *ngFor="let  items of  bannerData">
-        <div class="banner-img">{{items}}<img [src]="items"/></div>
+        <div class="banner-img"><img [src]="items"/></div>
       </ion-slide>
     </ion-slides>
   </div>
@@ -17,6 +19,12 @@
     <div class="list">
       <ion-grid>
         <ion-row>
+          <ion-col width-25><img src="../../assets/icon/icon1-1.png"/>
+            <p>国礼工艺</p></ion-col>
+          <ion-col width-25><img src="../../assets/icon/icon1-1.png"/>
+            <p>国礼工艺</p></ion-col>
+          <ion-col width-25><img src="../../assets/icon/icon1-1.png"/>
+            <p>国礼工艺</p></ion-col>
           <ion-col width-25><img src="../../assets/icon/icon1-1.png"/>
             <p>国礼工艺</p></ion-col>
           <ion-col width-25><img src="../../assets/icon/icon1-2.png"/>
@@ -30,21 +38,15 @@
 
     </div>
   </div>
+
   <div class="floor-2 clear">
     <div class="left font-default">唐朝头条</div>
     <div class="right">
-      <ion-slides autoplay="2000" loop direction="vertical">
-        <ion-slide>
-          <div class="text-list">TCC平安扣 人在干 天在看 <i></i></div>
+      <ion-slides autoplay="2000" loop direction="vertical" *ngIf="newsData.length>0">
+        <ion-slide *ngFor="let items of  newsData">
+          <div class="text-list"><i></i>{{items}}</div>
         </ion-slide>
 
-        <ion-slide>
-          <div class="text-list">人在干 天在看TCC平安扣 <i></i></div>
-        </ion-slide>
-
-        <ion-slide>
-          <div class="text-list">人在干TCC平安扣 天在看 <i></i></div>
-        </ion-slide>
 
       </ion-slides>
 
@@ -55,139 +57,66 @@
     <div class="floor-3-title">精心推荐国礼 <i>... </i></div>
     <ul class="list">
       <li><h3>高端馈赠</h3><h4>国礼巨匠诚心臻品</h4><img src="../../assets/icon/cur/img1.png"/></li>
-
-      <li><h3>高端馈赠</h3><img src="../../assets/icon/cur/img2.png"/></li>
-      <li><h3>高端馈赠</h3><img src="../../assets/icon/cur/img3.png"/></li>
-      <li><h3>高端馈赠</h3><img src="../../assets/icon/cur/img4.png"/></li>
-      <li><h3>高端馈赠</h3><img src="../../assets/icon/cur/img5.png"/></li>
-      <li><h3>高端馈赠</h3><img src="../../assets/icon/cur/img6.png"/></li>
-      <li><h3>高端馈赠</h3><img src="../../assets/icon/cur/img7.png"/></li>
-      <li><h3>高端馈赠</h3><img src="../../assets/icon/cur/img8.png"/></li>
-      <li><h3>高端馈赠</h3><img src="../../assets/icon/cur/img9.png"/></li>
+      <li><h3>开业庆典</h3><img src="../../assets/icon/cur/img2.png"/></li>
+      <li><h3>商务交流</h3><img src="../../assets/icon/cur/img3.png"/></li>
+      <li><h3>佛缘善结</h3><img src="../../assets/icon/cur/img4.png"/></li>
+      <li><h3>乔迁新居</h3><img src="../../assets/icon/cur/img5.png"/></li>
+      <li><h3>生日祝寿</h3><img src="../../assets/icon/cur/img6.png"/></li>
+      <li><h3>吉庆旺财</h3><img src="../../assets/icon/cur/img7.png"/></li>
+      <li><h3>增福增运</h3><img src="../../assets/icon/cur/img8.png"/></li>
+      <li><h3>乐活休闲</h3><img src="../../assets/icon/cur/img9.png"/></li>
     </ul>
   </div>
   <div class="floor-4">
-    <ion-scroll scrollX="true" class="tab-bar">
-      <div [(ngStyle)]="tabBar">
-        <P [(ngStyle)]="tabBarP" class="active">推荐匠人</P>
-        <P [(ngStyle)]="tabBarP">清美</P>
-        <P [(ngStyle)]="tabBarP">央美</P>
-        <P [(ngStyle)]="tabBarP">鲁美</P>
-        <P [(ngStyle)]="tabBarP">广美</P>
-        <P [(ngStyle)]="tabBarP">辽美</P>
-      </div>
-    </ion-scroll>
+    <div class="tab-bar">
+      <ion-slides slidesPerView="4" *ngIf="tabBarData.length>0">
+        <ion-slide *ngFor="let items of  tabBarData">
+          <p class="tab-bar-p" [id]="items.id" [ngClass]="{'active':isTabActive == items.id}"
+             (click)="tabConGet(items.id)">{{items.title}}</p>
+        </ion-slide>
+      </ion-slides>
+
+    </div>
     <div class="tab-card">
-      <ion-slides autoplay="2000" loop parallax='true' slidesPerView="1.2" centeredSlides>
-        <ion-slide>
+      <ion-slides autoplay="2000" loop parallax='true' slidesPerView="1.2" centeredSlides
+                  *ngIf="tabConData.length>0">
+        <ion-slide *ngFor="let items of  tabConData">
           <div class="tab-card-con">
             <div class="user-infor">
-              <img src="../../assets/icon/cur/img10.png"/>
-              <p class="name">谢伯齐</p>
-              <p class="position">著名跨界实力派艺术家</p>
-              <P class="note"><span><i>#</i>标签</span><span><i>#</i>标签</span><span><i>#</i>标签</span></P>
+              <img [src]="items.header"/>
+              <p class="name">{{items.name}}</p>
+              <p class="position">{{items.position}}</p>
+              <P class="note"><span *ngFor="let $s of  items.label"><i>#</i>{{$s}}</span></P>
               <div class="photo">
-                <img src="../../assets/icon/cur/img11.jpg"/>
-                <img src="../../assets/icon/cur/img12.jpg"/>
-                <img src="../../assets/icon/cur/img13.jpg"/>
+                <img *ngFor="let $img of  items.photo" [src]="$img"/>
               </div>
             </div>
           </div>
         </ion-slide>
-
-        <ion-slide>
-
-          <div class="tab-card-con">
-            <div class="user-infor">
-              <img src="../../assets/icon/cur/img10.png"/>
-              <p class="name">谢伯齐55</p>
-              <p class="position">著名跨界实力派艺术家</p>
-              <P class="note"><span><i>#</i>标签</span><span><i>#</i>标签</span><span><i>#</i>标签</span></P>
-              <div class="photo">
-                <img src="../../assets/icon/cur/img13.jpg"/>
-                <img src="../../assets/icon/cur/img12.jpg"/>
-                <img src="../../assets/icon/cur/img11.jpg"/>
-              </div>
-            </div>
-          </div>
-
-        </ion-slide>
-
-        <ion-slide>
-
-          <div class="tab-card-con">
-            <div class="user-infor">
-              <img src="../../assets/icon/cur/img10.png"/>
-              <p class="name">谢伯齐2</p>
-              <p class="position">著名跨界实力派艺术家</p>
-              <P class="note"><span><i>#</i>标签</span><span><i>#</i>标签</span><span><i>#</i>标签</span></P>
-              <div class="photo">
-                <img src="../../assets/icon/cur/img12.jpg"/>
-                <img src="../../assets/icon/cur/img13.jpg"/>
-                <img src="../../assets/icon/cur/img11.jpg"/>
-              </div>
-            </div>
-          </div>
-
-        </ion-slide>
-
       </ion-slides>
     </div>
   </div>
   <div class="floor-5">
-    <ul class="list">
-      <li>
-        <h3 class="list-title"><p>国礼•文化</p></h3>
+
+
+    <ul class="list" *ngIf="listData.length>0">
+      <li *ngFor="let items of  listData">
+        <h3 class="list-title"><p>{{items.name}}</p></h3>
         <div class="photo">
-          <img src="../../assets/icon/cur/banner3.png"/>
+          <img [src]="items.proImg"/>
           <div class="note">
-            <p>陶瓷</p>
-            <p>陶瓷</p>
-            <p>陶瓷</p>
+            <p *ngFor="let $p of  items.label">{{$p}}</p>
           </div>
         </div>
-        <h4>巅峰玉雕，至尚臻品</h4>
-        <h5>隐藏在玉石中最美的姿态,没有风格便是巅峰玉雕最大的风格</h5>
-      </li>
-      <li>
-        <h3 class="list-title"><p>国礼•文化</p></h3>
-        <div class="photo">
-          <img src="../../assets/icon/cur/banner3.png"/>
-          <div class="note">
-            <p>陶瓷</p>
-            <p>陶瓷</p>
-            <p>陶瓷</p>
-          </div>
-        </div>
-        <h4>巅峰玉雕，至尚臻品</h4>
-        <h5>隐藏在玉石中最美的姿态,没有风格便是巅峰玉雕最大的风格</h5>
-      </li>
-      <li>
-        <h3 class="list-title"><p>国礼•文化</p></h3>
-        <div class="photo">
-          <img src="../../assets/icon/cur/banner2.png"/>
-          <div class="note">
-            <p>陶瓷</p>
-            <p>陶瓷</p>
-            <p>陶瓷</p>
-          </div>
-        </div>
-        <h4>巅峰玉雕，至尚臻品</h4>
-        <h5>隐藏在玉石中最美的姿态,没有风格便是巅峰玉雕最大的风格</h5>
-      </li>
-      <li>
-        <h3 class="list-title"><p>国礼•文化</p></h3>
-        <div class="photo">
-          <img src="../../assets/icon/cur/banner1.png"/>
-          <div class="note">
-            <p>陶瓷</p>
-            <p>陶瓷</p>
-            <p>陶瓷</p>
-          </div>
-        </div>
-        <h4>巅峰玉雕，至尚臻品</h4>
-        <h5>隐藏在玉石中最美的姿态,没有风格便是巅峰玉雕最大的风格</h5>
+        <h4>{{items.title}}</h4>
+        <h5>{{items.detail}}</h5>
       </li>
     </ul>
+
+
   </div>
+  <ion-infinite-scroll (ionInfinite)="doRefresh($event)">
+    <ion-infinite-scroll-content>
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

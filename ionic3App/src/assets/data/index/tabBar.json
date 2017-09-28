@@ -1,0 +1,41 @@
+{
+  "code": "1",
+  "itemsObj": [
+    {
+      "title": "推荐匠人",
+      "id": "tabBar1"
+    },
+    {
+      "title": "清美",
+      "id": "tabBar2"
+    },
+    {
+      "title": "央美",
+      "id": "tabBar3"
+    },
+    {
+      "title": "鲁美",
+      "id": "tabBar4"
+    },
+    {
+      "title": "广美",
+      "id": "tabBar5"
+    },
+    {
+      "title": "辽美",
+      "id": "tabBar6"
+    },
+    {
+      "title": "上美",
+      "id": "tabBar7"
+    },
+    {
+      "title": "乌梅",
+      "id": "tabBar8"
+    },
+    {
+      "title": "杨梅",
+      "id": "tabBar9"
+    }
+  ]
+}

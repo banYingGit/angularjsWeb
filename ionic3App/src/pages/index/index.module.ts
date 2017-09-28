@@ -14,12 +14,18 @@ import {IndexPage} from './index';
 
 export class IndexPageModule {
 
-  images: Array<string>;
+  items: Array<string>;
+  itemsObj: Array<tabBarModule>;
 
 }
-// export class List1Model {
-//   bannerData: any;
-//   image: string;
-//   description: string;
-//
-// }
+export class tabBarModule {
+  title: string;
+  id: string;
+  header: string;
+  name: string;
+  position: string;
+  label: Array<string>;
+  photo: Array<string>;
+  detail: string;
+  proImg: string
+}

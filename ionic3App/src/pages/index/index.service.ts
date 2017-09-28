@@ -7,10 +7,10 @@ export class IndexService {
   constructor(public http: Http) {
   }
 
-  getData(url): Promise<IndexPageModule> {
-    return this.http.get(url)
+  getData(url, param): Promise<IndexPageModule> {
+    return this.http.get(url, param)
       .toPromise()
-      .then(response => response.json()  as IndexPageModule )
+      .then(response => response.json()  as IndexPageModule)
       .catch(this.handleError);
 
   }

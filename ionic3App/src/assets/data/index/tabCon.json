@@ -1,0 +1,69 @@
+{
+  "code": "1",
+  "itemsObj": [
+    {
+      "id": "1",
+      "header": "../../assets/icon/cur/img10.png",
+      "name": "谢伯齐",
+      "position": "著名跨界实力派艺术家",
+      "label": [
+        "标签",
+        "标签",
+        "标签"
+      ],
+      "photo": [
+        "../../assets/icon/cur/img11.jpg",
+        "../../assets/icon/cur/img12.jpg",
+        "../../assets/icon/cur/img13.jpg"
+      ]
+    },
+    {
+      "id": "tabBar2",
+      "header": "../../assets/icon/cur/img11.jpg",
+      "name": "谢伯齐55",
+      "position": "著名跨界实力派艺术家",
+      "label": [
+        "标签",
+        "标签3",
+        "标签"
+      ],
+      "photo": [
+        "../../assets/icon/cur/img11.jpg",
+        "../../assets/icon/cur/img12.jpg",
+        "../../assets/icon/cur/img13.jpg"
+      ]
+    },
+    {
+      "id": "3",
+      "header": "../../assets/icon/cur/img12.jpg",
+      "name": "谢伯齐114",
+      "position": "著名跨界实力派艺术家",
+      "label": [
+        "标签1",
+        "标签",
+        "标签"
+      ],
+      "photo": [
+        "../../assets/icon/cur/img11.jpg",
+        "../../assets/icon/cur/img12.jpg",
+        "../../assets/icon/cur/img13.jpg"
+      ]
+    },
+    {
+      "id": "4",
+      "header": "../../assets/icon/cur/img13.jpg",
+      "name": "谢伯齐22",
+      "position": "著名跨界实力派艺术家",
+      "label": [
+        "标签5",
+        "标签4",
+        "标签"
+      ],
+      "photo": [
+        "../../assets/icon/cur/img11.jpg",
+        "../../assets/icon/cur/img12.jpg",
+        "../../assets/icon/cur/img13.jpg"
+      ]
+    }
+  ]
+}
