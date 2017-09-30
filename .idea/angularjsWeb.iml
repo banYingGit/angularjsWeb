@@ -3,7 +3,9 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/ionic3App/node_modules/cordova-ios/tests/spec/unit/fixtures/dummyProj/platforms" />
       <excludeFolder url="file://$MODULE_DIR$/ionic3App/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/ionic3App/www" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>
