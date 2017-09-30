@@ -1,14 +1,15 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
 import {Slides} from 'ionic-angular';
+import {NewsListPage} from '../news-list/news-list';
+import {ChannelListPage} from '../channel-list/channel-list';
+import {MasterDetailsPage} from '../master-details/master-details';
 
 import 'rxjs/Rx';
 import {IndexPageModule} from './index.module';
 import {IndexService} from './index.service';
 
-
 @IonicPage()
-
 
 @Component({
   selector: 'page-index',
@@ -17,19 +18,17 @@ import {IndexService} from './index.service';
 export class IndexPage {
 
   bannerData = [''];
-  newsData = [''];
+  newsData = [];
   tabBarData = [{}];
   tabConData = [];
   listData = [];
   themeData = [];
   loading: any;
   isTabActive = ''
-  index: IndexPageModule = new IndexPageModule();
-
+  // index: IndexPageModule = new IndexPageModule();
   pageNum = 1;
 
   @Component(Slides) slides: Slides;
-
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -40,12 +39,9 @@ export class IndexPage {
 
   }
 
-  ionViewWillEnter() {
-    // this.loading.present();
-    // $this.loading.dismiss();
-  }
-
   ionViewDidLoad() {
+
+    this.loading.present();
 
     var $this = this;
 
@@ -70,7 +66,7 @@ export class IndexPage {
     this.indexService
       .getData(newsUrl, '')
       .then(function (data) {
-        $this.newsData = data.items;
+        $this.newsData = data.itemsObj;
       });
 
     /*获取tab标签*/
@@ -84,6 +80,8 @@ export class IndexPage {
       });
 
     this.listGet('1', '')
+
+    this.loading.dismiss();
   }
 
   tabConGet(id) {
@@ -119,5 +117,19 @@ export class IndexPage {
     this.listGet(this.pageNum, function () {
       refresher.complete();
     })
+  }
+
+  /*页面跳转*/
+  goNewsPage(id) {
+    this.navCtrl.push(NewsListPage, id);
+  }
+
+  goChannelPage(id) {
+    this.navCtrl.push(ChannelListPage, id);
+  }
+
+  goMasterPage(id) {
+    this.navCtrl.push(MasterDetailsPage, id)
+
   }
 }

@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>channelList</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="main">
+    <div class="tab-bar">
+      <ion-slides slidesPerView="6" *ngIf="tabBarData.length>0">
+        <ion-slide *ngFor="let items of  tabBarData">
+          <p class="tab-bar-p" [id]="items.id" [ngClass]="{'active':isTabActive == items.id}"
+             (click)="ListGet(items.id)">{{items.title}}</p>
+        </ion-slide>
+      </ion-slides>
+
+    </div>
+    <ul class="list" *ngIf="listData.length>0">
+      <li *ngFor="let items of  listData">
+
+        <div class="photo">
+          <img [src]="items.proImg"/>
+          <div class="note"><span *ngFor="let $s of  items.label"><i>#</i>{{$s}}</span></div>
+        </div>
+        <h4>{{items.title}}</h4>
+        <h5>{{items.detail}}</h5>
+      </li>
+
+    </ul>
+  </div>
+</ion-content>

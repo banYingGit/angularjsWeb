@@ -5,8 +5,6 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-
-
   <div class="banner">
     <ion-slides pager autoplay="2000" loop *ngIf="bannerData.length>0">
       <ion-slide *ngFor="let  items of  bannerData">
@@ -19,10 +17,9 @@
     <div class="list">
 
       <ul *ngIf="themeData.length>0">
-        <li *ngFor="let  items of  themeData"><img [src]="items.proImg"/>
+        <li *ngFor="let  items of  themeData" (click)="goChannelPage(items.id)"><img [src]="items.proImg"/>
           <p>{{items.title}}</p></li>
       </ul>
-
     </div>
   </div>
 
@@ -31,10 +28,8 @@
     <div class="right">
       <ion-slides autoplay="2000" loop direction="vertical" *ngIf="newsData.length>0">
         <ion-slide *ngFor="let items of  newsData">
-          <div class="text-list"><i></i>{{items}}</div>
+          <div class="text-list" (click)="goNewsPage(items.id)"><i></i>{{items.title}}</div>
         </ion-slide>
-
-
       </ion-slides>
 
     </div>
@@ -68,7 +63,7 @@
       <ion-slides autoplay="2000" loop parallax='true' slidesPerView="1.2" centeredSlides
                   *ngIf="tabConData.length>0">
         <ion-slide *ngFor="let items of  tabConData">
-          <div class="tab-card-con">
+          <div class="tab-card-con" (click)="goMasterPage(items.id)">
             <div class="user-infor">
               <img [src]="items.header"/>
               <p class="name">{{items.name}}</p>
@@ -84,7 +79,6 @@
     </div>
   </div>
   <div class="floor-5">
-
 
     <ul class="list" *ngIf="listData.length>0">
       <li *ngFor="let items of  listData">

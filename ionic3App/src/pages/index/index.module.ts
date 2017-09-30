@@ -15,10 +15,10 @@ import {IndexPage} from './index';
 export class IndexPageModule {
 
   items: Array<string>;
-  itemsObj: Array<tabBarModule>;
+  itemsObj: Array<ObjectModule>;
 
 }
-export class tabBarModule {
+export class ObjectModule {
   title: string;
   id: string;
   header: string;
