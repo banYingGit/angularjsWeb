@@ -25,7 +25,7 @@ export class IndexPage {
   isTabActive = ''
   index: IndexPageModule = new IndexPageModule();
 
-  items = [];
+  pageNum = 1;
 
   @Component(Slides) slides: Slides;
 
@@ -40,11 +40,8 @@ export class IndexPage {
   }
 
   ionViewWillEnter() {
-
     // this.loading.present();
     // $this.loading.dismiss();
-
-
   }
 
   ionViewDidLoad() {
@@ -68,8 +65,7 @@ export class IndexPage {
       });
 
     /*获取tab标签*/
-    var tabBarUrl = './assets/data/index/tabBar.json',
-      $w = document.body.clientWidth;
+    var tabBarUrl = './assets/data/index/tabBar.json';
     this.indexService
       .getData(tabBarUrl, '')
       .then(function (data) {
@@ -102,32 +98,17 @@ export class IndexPage {
     this.indexService
       .getData(listUrl, page)
       .then(function (data) {
-        $this.listData = data.itemsObj;
+        $this.listData = $this.listData.concat(data.itemsObj);
         fn && fn.call(this)
       });
 
   }
 
   doRefresh(refresher) {
-
-    for (let i = 0; i < 10; i++) {
-      this.items.push(this.items.length);
-    }
-
-    console.log('》》》》》》》', refresher);
-
-    console.log('this.items', this.items)
-
-    // setTimeout(function () {
-    //
-    // }, 2000)
-    this.listGet('1', function () {
-
+    this.pageNum = this.pageNum + 1;
+    console.log('当前分页', this.pageNum)
+    this.listGet(this.pageNum, function () {
       refresher.complete();
-
     })
-
-
   }
-
 }
