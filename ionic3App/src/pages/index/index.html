@@ -18,26 +18,9 @@
     <ion-title class="ui-title">主题站</ion-title>
     <div class="list">
 
-      <ul>
-        <li><img src="../../assets/icon/icon1-1.png"/>
-          <p>国礼工艺</p></li>
-        <li><img src="../../assets/icon/icon1-1.png"/>
-          <p>国礼工艺</p></li>
-        <li><img src="../../assets/icon/icon1-1.png"/>
-          <p>国礼工艺</p></li>
-        <li><img src="../../assets/icon/icon1-1.png"/>
-          <p>国礼工艺</p></li>
-        <li><img src="../../assets/icon/icon1-1.png"/>
-          <p>国礼工艺</p></li>
-        <li><img src="../../assets/icon/icon1-1.png"/>
-          <p>国礼工艺</p></li>
-        <li><img src="../../assets/icon/icon1-1.png"/>
-          <p>国礼工艺</p></li>
-        <li><img src="../../assets/icon/icon1-1.png"/>
-          <p>国礼工艺</p></li>
-        <li><img src="../../assets/icon/icon1-1.png"/>
-          <p>国礼工艺</p></li>
-
+      <ul *ngIf="themeData.length>0">
+        <li *ngFor="let  items of  themeData"><img [src]="items.proImg"/>
+          <p>{{items.title}}</p></li>
       </ul>
 
     </div>

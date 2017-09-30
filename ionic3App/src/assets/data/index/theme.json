@@ -1,0 +1,30 @@
+{
+  "code": "1",
+  "itemsObj": [
+    {
+      "id": "theme1",
+      "proImg": "../../assets/icon/cur/banner1.png",
+      "title": "巅峰玉雕"
+    },
+    {
+      "id": "theme2",
+      "proImg": "../../assets/icon/cur/img12.jpg",
+      "title": "巅峰玉雕"
+    },
+    {
+      "id": "theme3",
+      "proImg": "../../assets/icon/cur/img11.jpg",
+      "title": "至尚臻品"
+    },
+    {
+      "id": "theme4",
+      "proImg": "../../assets/icon/cur/banner2.png",
+      "title": "巅峰臻品"
+    },
+    {
+      "id": "theme5",
+      "proImg": "../../assets/icon/cur/img11.jpg",
+      "title": "巅峰臻品"
+    }
+  ]
+}

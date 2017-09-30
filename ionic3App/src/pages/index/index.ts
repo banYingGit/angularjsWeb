@@ -20,7 +20,8 @@ export class IndexPage {
   newsData = [''];
   tabBarData = [{}];
   tabConData = [];
-  listData = []
+  listData = [];
+  themeData = [];
   loading: any;
   isTabActive = ''
   index: IndexPageModule = new IndexPageModule();
@@ -54,6 +55,14 @@ export class IndexPage {
       .getData(bannerUrl, '')
       .then(function (data) {
         $this.bannerData = data.items;
+      });
+
+    /*获取主题站*/
+    var themeUrl = './assets/data/index/theme.json';
+    this.indexService
+      .getData(themeUrl, '')
+      .then(function (data) {
+        $this.themeData = data.itemsObj;
       });
 
     /*获取头条*/
