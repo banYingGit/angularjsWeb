@@ -6,7 +6,6 @@ import {ChannelListPage} from '../channel-list/channel-list';
 import {MasterDetailsPage} from '../master-details/master-details';
 
 import 'rxjs/Rx';
-import {IndexPageModule} from './index.module';
 import {IndexService} from './index.service';
 
 @IonicPage()
@@ -42,7 +41,6 @@ export class IndexPage {
   ionViewDidLoad() {
 
     this.loading.present();
-
     var $this = this;
 
     /*获取banner*/
@@ -80,12 +78,11 @@ export class IndexPage {
       });
 
     this.listGet('1', '')
-
     this.loading.dismiss();
+
   }
 
   tabConGet(id) {
-
     var $this = this;
     /*点击获取tab卡片*/
     var tabConUrl = './assets/data/index/tabCon.json';

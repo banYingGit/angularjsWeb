@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { MasterDetailsPage } from './master-details';
+import {NgModule} from '@angular/core';
+import {IonicPageModule} from 'ionic-angular';
+import {MasterDetailsPage} from './master-details';
 
 @NgModule({
   declarations: [
@@ -10,4 +10,19 @@ import { MasterDetailsPage } from './master-details';
     IonicPageModule.forChild(MasterDetailsPage),
   ],
 })
-export class MasterDetailsPageModule {}
+export class MasterDetailsPageModule {
+  userInfor: object
+  proList: Array<ObjectModule>
+  infor1: string
+  infor2: string
+}
+
+export class ObjectModule {
+  id: string;
+  proImg: string;
+  title: string;
+  price: string;
+  num: string;
+  level: string;
+  detail: string;
+}

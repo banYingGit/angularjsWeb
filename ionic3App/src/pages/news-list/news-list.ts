@@ -1,12 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the NewsListPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
+import {NewsListService} from './news-list.service';
 
 @IonicPage()
 @Component({
@@ -15,11 +9,42 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NewsListPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  listData = []
+  loading: any;
+  pageNum = 1;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public newsListService: NewsListService,
+              public loadingCtrl: LoadingController) {
+    this.loading = this.loadingCtrl.create();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NewsListPage');
+    var $this = this;
+    this.loading.present();
+    this.listGet(1, function () {
+      $this.loading.dismiss();
+    })
   }
 
+  listGet(page, fn) {
+    var $this = this;
+    /*点击获取列表内容*/
+    var listUrl = './assets/data/newsList.json';
+    var param = {"page": page}
+    this.newsListService
+      .getData(listUrl, param)
+      .then(function (data) {
+        $this.listData = $this.listData.concat(data.itemsObj);
+        fn && fn.call($this)
+      });
+  }
+
+  /*刷新获取*/
+  doRefresh(refresher) {
+    this.pageNum = this.pageNum + 1;
+    this.listGet(this.pageNum, function () {
+      refresher.complete();
+    })
+  }
 }

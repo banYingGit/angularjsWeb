@@ -21,6 +21,8 @@ import {MasterDetailsPage} from '../pages/master-details/master-details';
 /*service*/
 import {IndexService} from '../pages/index/index.service';
 import {ChannelListService} from '../pages/channel-list/channel-list.service';
+import {NewsListService} from '../pages/news-list/news-list.service';
+import {MasterDetailsService} from '../pages/master-details/master-details.service';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import {ChannelListService} from '../pages/channel-list/channel-list.service';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     IndexService,
-    ChannelListService
+    ChannelListService,
+    NewsListService,
+    MasterDetailsService
   ]
 })
 export class AppModule {

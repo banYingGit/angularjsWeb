@@ -1,8 +1,10 @@
 page-channel-list {
+  .content {
+    background: $color-f0;
+  }
   .main {
     width: 100%;
     min-height: 100%;
-    background: $color-f0;
     .tab-bar {
       position: relative;
       z-index: 10;
@@ -35,7 +37,20 @@ page-channel-list {
           }
         }
       }
-
+      .drop {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 15%;
+        text-align: center;
+        line-height: 40px;
+        background: $color-f;
+        > img {
+          height: 20px;
+          vertical-align: middle;
+        }
+      }
     }
     > ul.list > li {
       width: 100%;
@@ -85,7 +100,7 @@ page-channel-list {
           left: 0;
           width: 100%;
           padding: 0 10px;
-          > p {
+          > span {
             height: 25px;
             float: left;
             margin: 15px 5px 0 5px;

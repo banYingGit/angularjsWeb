@@ -1,6 +1,9 @@
 page-master-details {
-  .main {
+  .content {
     background: $color-f0;
+  }
+  .main {
+
     min-height: 100%;
     .artist-header {
       position: relative;
@@ -66,7 +69,7 @@ page-master-details {
     .artist-bottom {
       position: relative;
       width: 100%;
-      margin-top: 15px;
+      margin: 15px 0;
       &:after {
         position: absolute;
         width: 40%;
@@ -80,7 +83,7 @@ page-master-details {
         width: 100%;
         height: 40px;
         border-bottom: solid 1px $color-c;
-        background: $color-f;
+        background: $color-f9;
         > p {
           position: relative;
           display: block;
@@ -106,7 +109,7 @@ page-master-details {
           }
         }
       }
-      > .list {
+      .list {
         li {
           width: 100%;
           height: 380px;
@@ -134,11 +137,29 @@ page-master-details {
               height: 20px;
               > span {
                 display: block;
+                height: 20px;
                 float: right;
                 margin-left: 5px;
+                > img {
+                  height: 100%;
+                  margin-right: 5px;
+                  vertical-align: text-bottom;
+                }
               }
             }
           }
+        }
+      }
+      .contain {
+        width: 100%;
+        padding: 10px 15px;
+        background: $color-f;
+
+        > p {
+          font-size: 14px;
+          line-height: 24px;
+          color: $color-79;
+          text-indent: 28px;
         }
       }
 
