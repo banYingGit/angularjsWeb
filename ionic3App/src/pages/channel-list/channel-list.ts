@@ -90,7 +90,7 @@ export class ChannelListPage {
     })
   }
 
-
+  /*设置slides 当前焦点*/
   goToSlide(index) {
     this.slides.slideTo(index, 500);
   }
