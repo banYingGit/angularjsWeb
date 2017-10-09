@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {IonicPage, NavController, NavParams, LoadingController, Slides} from 'ionic-angular';
 import {ArticleDetailsPage} from '../article-details/article-details';
 import 'rxjs/Rx';
 import {ChannelListService} from './channel-list.service';
@@ -11,11 +11,14 @@ import {ChannelListService} from './channel-list.service';
 })
 export class ChannelListPage {
 
+  @ViewChild(Slides) slides: Slides;
+
   tabBarData = [{}];
   listData = []
   loading: any;
   isTabActive = ''
   pageNum = 1;
+  isShowSlide = false;
 
   // channelList: ChannelListPageModule = new ChannelListPageModule();
 
@@ -73,7 +76,23 @@ export class ChannelListPage {
     var $this = this;
     this.listGet(id, 1, function () {
       $this.listData = []
+      $this.isShowSlide = false
     })
+  }
+
+  /*弹出点击获取*/
+  clickPopGet(id, index) {
+    var $this = this;
+    this.listGet(id, 1, function () {
+      $this.listData = []
+      $this.isShowSlide = false
+      $this.goToSlide(index)
+    })
+  }
+
+
+  goToSlide(index) {
+    this.slides.slideTo(index, 500);
   }
 
   goDetail(id) {

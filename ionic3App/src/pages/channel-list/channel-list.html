@@ -12,7 +12,22 @@
              (click)="clickGet(items.id)">{{items.title}}</p>
         </ion-slide>
       </ion-slides>
-      <div class="drop"><img src="../../assets/icon/icon4-1.png"/></div>
+      <div class="drop" (click)="isShowSlide=true"><img src="../../assets/icon/icon4-1.png"/></div>
+    </div>
+    <div class="slide-pop" *ngIf="isShowSlide">
+      <div class="slide-pop-con">
+        <ion-title class="ui-title"><img src="../../assets/icon/icon4-1.png" class="right" (click)="isShowSlide=false"/>
+          切换栏目
+        </ion-title>
+        <ul class="list" *ngIf="tabBarData.length>0">
+          <li *ngFor="let items of  tabBarData,let idx=index" [id]="items.id"
+              [ngClass]="{'active':isTabActive == items.id}"
+              (click)="clickPopGet(items.id,idx)">
+            {{items.title}}
+          </li>
+        </ul>
+      </div>
+
     </div>
 
     <ul class="list" *ngIf="listData.length>0">
