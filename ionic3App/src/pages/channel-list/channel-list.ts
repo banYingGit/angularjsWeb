@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
-
+import {ArticleDetailsPage} from '../article-details/article-details';
 import 'rxjs/Rx';
 import {ChannelListService} from './channel-list.service';
 
@@ -55,10 +55,11 @@ export class ChannelListPage {
         fn && fn.call($this)
         $this.listData = $this.listData.concat(data.itemsObj);
         $this.isTabActive = id
-        $this.pageNum=page
-        console.log('当前分页',page)
+        $this.pageNum = page
+        console.log('当前分页', page)
       });
   }
+
   /*刷新获取*/
   doRefresh(refresher) {
     this.pageNum = this.pageNum + 1;
@@ -66,12 +67,17 @@ export class ChannelListPage {
       refresher.complete();
     })
   }
+
   /*点击获取*/
   clickGet(id) {
     var $this = this;
     this.listGet(id, 1, function () {
-      $this.listData=[]
+      $this.listData = []
     })
+  }
+
+  goDetail(id) {
+    this.navCtrl.push(ArticleDetailsPage, {"id": id});
   }
 }
 

@@ -1,0 +1,29 @@
+{
+  "code": "1",
+  "itemArr": [
+    {
+      "id": "list1",
+      "proImg": "../../assets/icon/cur/banner1.png",
+      "title": "巅峰玉雕，至尚臻品",
+      "price": "155"
+    },
+    {
+      "id": "list2",
+      "proImg": "../../assets/icon/cur/img12.jpg",
+      "title": "巅峰玉雕，至尚臻品至尚臻品至尚臻品至尚臻品至尚臻品至尚臻品至尚臻品至尚臻品至尚臻品至尚臻品至尚臻品至尚臻品",
+      "price": "785"
+    },
+    {
+      "id": "list3",
+      "proImg": "../../assets/icon/cur/img11.jpg",
+      "title": "巅峰玉雕，至尚臻品",
+      "price": "580"
+    },
+    {
+      "id": "list4",
+      "proImg": "../../assets/icon/cur/banner2.png",
+      "title": "巅峰玉雕，至尚臻品",
+      "price": "980"
+    }
+  ]
+}

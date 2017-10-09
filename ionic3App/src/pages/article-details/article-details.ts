@@ -1,12 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
+import {ArticleDetailsService} from './article-details.service';
 
-/**
- * Generated class for the ArticleDetailsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +10,40 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ArticleDetailsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  pageId = '';
+  loading: any;
+  detailData = {}
+  proList = []
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public articleDetailsService: ArticleDetailsService,) {
+
+    this.loading = this.loadingCtrl.create();
+    this.pageId = navParams.get('id')
+    console.log('this.pageId', this.pageId)
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ArticleDetailsPage');
+    this.loading.present();
+    var $this = this;
+    var param = {'id': this.pageId}
+    var dataUrl = './assets/data/article-details/detail.json';
+    this.articleDetailsService
+      .getData(dataUrl, param)
+      .then(function (data) {
+        $this.detailData = data.itemObj;
+      });
+    var listUrl = './assets/data/article-details/list.json';
+    this.articleDetailsService
+      .getData(listUrl, param)
+      .then(function (data) {
+        $this.proList = data.itemArr;
+      });
+    this.loading.dismiss();
+  }
+
+  goDetail(id) {
+    console.log('>>>id', id)
+    this.navCtrl.push(ArticleDetailsPage, {"id": id});
   }
 
 }

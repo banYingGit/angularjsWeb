@@ -23,6 +23,7 @@ import {IndexService} from '../pages/index/index.service';
 import {ChannelListService} from '../pages/channel-list/channel-list.service';
 import {NewsListService} from '../pages/news-list/news-list.service';
 import {MasterDetailsService} from '../pages/master-details/master-details.service';
+import {ArticleDetailsService} from '../pages/article-details/article-details.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import {MasterDetailsService} from '../pages/master-details/master-details.servi
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {tabsHideOnSubPages: 'true'}),
     HttpModule
   ],
   bootstrap: [IonicApp],
@@ -56,7 +57,8 @@ import {MasterDetailsService} from '../pages/master-details/master-details.servi
     IndexService,
     ChannelListService,
     NewsListService,
-    MasterDetailsService
+    MasterDetailsService,
+    ArticleDetailsService
   ]
 })
 export class AppModule {

@@ -14,8 +14,9 @@
       </ion-slides>
       <div class="drop"><img src="../../assets/icon/icon4-1.png"/></div>
     </div>
+
     <ul class="list" *ngIf="listData.length>0">
-      <li *ngFor="let items of  listData">
+      <li *ngFor="let items of  listData" (click)="goDetail(items.id)">
         <div class="photo">
           <img [src]="items.proImg"/>
           <div class="note"><span *ngFor="let $s of  items.label">{{$s}}</span></div>
