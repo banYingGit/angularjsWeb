@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
 import {MakeResultPage} from '../make-result/make-result';
 /**
  * Generated class for the MakePage page.
@@ -14,7 +14,7 @@ import {MakeResultPage} from '../make-result/make-result';
   templateUrl: 'make.html',
 })
 export class MakePage {
-
+  loading: any;
   gender = 'male'
   purpose = ''
   culture1 = ''
@@ -26,11 +26,13 @@ export class MakePage {
   HDate = ''
   mDate = ''
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
+    this.loading = this.loadingCtrl.create();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MakePage');
+    this.loading.present();
+    this.loading.dismiss();
   }
 
   changeCheck() {
@@ -39,7 +41,7 @@ export class MakePage {
     console.log('Cucumbers new culture3:' + this.culture3);
   }
 
-  goResult(){
+  goResult() {
     this.navCtrl.push(MakeResultPage)
   }
 }

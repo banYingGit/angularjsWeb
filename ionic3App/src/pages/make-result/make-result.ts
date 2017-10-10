@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
 import {MakeResultService} from './make-resule.service';
 /**
  * Generated class for the MakeResultPage page.
@@ -14,14 +14,16 @@ import {MakeResultService} from './make-resule.service';
   templateUrl: 'make-result.html',
 })
 export class MakeResultPage {
-
+  loading: any;
   initData = {}
   listData = []
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public makeResultService: MakeResultService,) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public makeResultService: MakeResultService, public loadingCtrl: LoadingController) {
+    this.loading = this.loadingCtrl.create();
   }
 
   ionViewDidLoad() {
+    this.loading.present();
 
     var $this = this;
     /*点击获取列表内容*/
@@ -33,6 +35,7 @@ export class MakeResultPage {
         $this.initData = data.itemsObj;
         $this.listData = data.listData;
         console.log('$this.initData', $this.initData)
+        $this.loading.dismiss();
       });
 
   }

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
 import {MakePage} from '../make/make';
 /**
  * Generated class for the MakeWelcomePage page.
@@ -14,11 +14,14 @@ import {MakePage} from '../make/make';
   templateUrl: 'make-welcome.html',
 })
 export class MakeWelcomePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  loading: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
+    this.loading = this.loadingCtrl.create();
   }
 
   ionViewDidLoad() {
+    this.loading.present();
+    this.loading.dismiss();
     // console.log('ionViewDidLoad MakeWelcomePage');
   }
 
