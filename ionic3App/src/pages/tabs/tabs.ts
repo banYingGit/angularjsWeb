@@ -1,10 +1,8 @@
 import {Component} from '@angular/core';
 
-// import { AboutPage } from '../about/about';
-
 import {IndexPage} from '../index/index';
 import {MakeWelcomePage} from '../make-welcome/make-welcome';
-
+import {MarketPage} from '../market/market';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -12,7 +10,7 @@ import {MakeWelcomePage} from '../make-welcome/make-welcome';
 export class TabsPage {
 
   tab1Root = IndexPage;
-  tab2Root = IndexPage;
+  tab2Root = MarketPage;
   tab3Root = MakeWelcomePage;
   tab4Root = IndexPage;
   tab5Root = IndexPage;
