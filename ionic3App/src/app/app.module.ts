@@ -27,6 +27,7 @@ import {ChannelListService} from '../pages/channel-list/channel-list.service';
 import {NewsListService} from '../pages/news-list/news-list.service';
 import {MasterDetailsService} from '../pages/master-details/master-details.service';
 import {ArticleDetailsService} from '../pages/article-details/article-details.service';
+import {MakeResultService} from '../pages/make-result/make-resule.service';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import {ArticleDetailsService} from '../pages/article-details/article-details.se
     ChannelListService,
     NewsListService,
     MasterDetailsService,
-    ArticleDetailsService
+    ArticleDetailsService,
+    MakeResultService
   ]
 })
 export class AppModule {

@@ -1,3 +1,120 @@
 page-make-result {
+  .result-top {
+    position: relative;
+    width: 100%;
+    .icon {
+      position: absolute;
+      top: 0;
+      right: 5%;
+      width: 17%;
+      > img {
+        display: block;
+        width: 100%;
+      }
 
+    }
+    .title {
+      width: 90%;
+      height: 100px;
+      margin: 0 auto;
+      padding: 25px 0;
+      line-height: 50px;
+      font-size: 24px;
+      color: $color-default;
+      @extend .ellipsis
+    }
+    .detail {
+      width: 90%;
+      margin: 0 auto;
+      padding: 15px;
+      background: $color-f0;
+      box-shadow: 0 0 5px 1px $color-c;
+      line-height: 22px;
+      color: $color-79;
+    }
+    .title-icon {
+      display: block;
+      margin: 30px auto 20px auto;
+      width: 80%;
+    }
+  }
+  .list {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    @extend .clear;
+    > li {
+      position: relative;
+      display: block;
+      float: left;
+      width: 47%;
+      height: 270px;
+      margin: 0 1.5%;
+      .label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 55%;
+        height: 30px;
+        padding-left: 5px;
+        background: url("../../assets/icon/g_icon4.png") center no-repeat;
+        background-size: 100% 100%;
+        color: $color-f;
+        line-height: 30px;
+        @extend .ellipsis;
+      }
+      .proImg {
+        display: block;
+        width: 100%;
+        height: 160px;
+      }
+      .title {
+        width: 100%;
+        height: 25px;
+        margin-top: 5px;
+        line-height: 25px;
+        font-size: 14px;
+        @extend .ellipsis
+      }
+      .price {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        color: $color-79;
+        @extend .ellipsis
+      }
+      .btn {
+        display: block;
+        float: right;
+        width: 80px;
+        height: 28px;
+        border: solid 1px $color-default;
+        border-radius: 14px;
+        text-align: center;
+        line-height: 28px;
+        color: $color-default;
+        font-size: 14px;
+      }
+    }
+  }
+  .foot-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    .button {
+      margin: 0;
+      padding: 0;
+      height: 40px;
+      width: 100%;
+      background: $color-default;
+      color: $color-f;
+      border-radius: 0;
+      .button-inner {
+        font-size: 15px;
+      }
+    }
+  }
 }

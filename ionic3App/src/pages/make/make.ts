@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
-
+import {MakeResultPage} from '../make-result/make-result';
 /**
  * Generated class for the MakePage page.
  *
@@ -39,4 +39,7 @@ export class MakePage {
     console.log('Cucumbers new culture3:' + this.culture3);
   }
 
+  goResult(){
+    this.navCtrl.push(MakeResultPage)
+  }
 }
