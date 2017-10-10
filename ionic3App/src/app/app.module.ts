@@ -16,6 +16,9 @@ import {NewsListPage} from '../pages/news-list/news-list';
 import {ChannelListPage} from '../pages/channel-list/channel-list';
 import {ArticleDetailsPage} from '../pages/article-details/article-details';
 import {MasterDetailsPage} from '../pages/master-details/master-details';
+import {MakeWelcomePage} from '../pages/make-welcome/make-welcome';
+import {MakePage} from '../pages/make/make';
+import {MakeResultPage} from '../pages/make-result/make-result';
 
 
 /*service*/
@@ -33,7 +36,11 @@ import {ArticleDetailsService} from '../pages/article-details/article-details.se
     NewsListPage,
     ChannelListPage,
     ArticleDetailsPage,
-    MasterDetailsPage
+    MasterDetailsPage,
+    MakeWelcomePage,
+    MakePage,
+    MakeResultPage
+
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,10 @@ import {ArticleDetailsService} from '../pages/article-details/article-details.se
     NewsListPage,
     ChannelListPage,
     ArticleDetailsPage,
-    MasterDetailsPage
+    MasterDetailsPage,
+    MakeWelcomePage,
+    MakePage,
+    MakeResultPage
   ],
   providers: [
     StatusBar,

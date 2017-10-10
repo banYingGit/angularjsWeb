@@ -1,0 +1,106 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>make</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="panel">
+    <ion-title class="ui-title font-default"><i> </i> 姓氏</ion-title>
+    <div class="panel-box">
+      <ion-item>
+        <ion-label>收礼者姓名</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <div class="radio-box-1">
+        <ion-list radio-group [(ngModel)]="gender">
+          <ion-list-header>
+            Ta的性别
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="male"><i></i> 男士</ion-label>
+            <ion-radio value="male"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="female"><i></i> 女士</ion-label>
+            <ion-radio value="female"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div class="radio-box-2">
+        <ion-list radio-group [(ngModel)]="purpose">
+          <ion-list-header>
+            用途
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="male">自用</ion-label>
+            <ion-radio value="purpose1"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="female">赠人</ion-label>
+            <ion-radio value="purpose2"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </div>
+  <div class="panel">
+    <ion-title class="ui-title font-default"><i> </i> 生辰</ion-title>
+    <div class="panel-box">
+      <ion-item>
+        <ion-label>生辰年月日</ion-label>
+        <ion-datetime displayFormat="YYYY/MM/DD" [(ngModel)]="MDYDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>时（选填）</ion-label>
+        <ion-datetime displayFormat="HH" [(ngModel)]="HDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>分（选填）</ion-label>
+        <ion-datetime displayFormat="mm" [(ngModel)]="mDate"></ion-datetime>
+      </ion-item>
+
+    </div>
+  </div>
+  <div class="panel">
+    <ion-title class="ui-title font-default"><i> </i> 吉祥文化<span>（选填）</span></ion-title>
+    <div class="panel-box">
+      <div class="radio-box-3">
+        <ion-list>
+
+          <ion-item>
+            <ion-label>招财</ion-label>
+            <ion-checkbox [(ngModel)]="culture1" (ionChange)="changeCheck()"></ion-checkbox>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>进宝</ion-label>
+            <ion-checkbox [(ngModel)]="culture2" (ionChange)="changeCheck()"></ion-checkbox>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>添丁</ion-label>
+            <ion-checkbox [(ngModel)]="culture3" (ionChange)="changeCheck()"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label>添丁</ion-label>
+            <ion-checkbox [(ngModel)]="culture4" (ionChange)="changeCheck()"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label>添丁</ion-label>
+            <ion-checkbox [(ngModel)]="culture5" (ionChange)="changeCheck()"></ion-checkbox>
+          </ion-item>
+
+        </ion-list>
+      </div>
+    </div>
+  </div>
+  <div class="label-text">可单选也可以多选</div>
+  <div class="foot-btn">
+    <button ion-button outline>重置</button>
+    <button ion-button>确定</button>
+  </div>
+</ion-content>
