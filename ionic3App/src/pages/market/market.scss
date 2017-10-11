@@ -1,3 +1,156 @@
 page-market {
+  .content {
+    background: $color-f0;
+  }
+  .tab-bar {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 40px;
+    background: $color-f;
+    overflow: hidden;
+    box-shadow: 0 0 8px 0 $color-c;
+    p.tab-bar-p {
+      position: relative;
+      height: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: $color-79;
+      line-height: 40px;
+      transition: all .2s;
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: $color-auxiliary;
+        opacity: 0;
+        transition: all .5s;
+        content: '';
+      }
+      &.active {
+        color: $color-3;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+    .drop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 15%;
+      text-align: center;
+      line-height: 39px;
+      background: $color-f;
+      border-left: solid 1px $color-f0;
+      > img {
+        height: 20px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .slide-pop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    background: $mask-b-6;
+    > .slide-pop-con {
+      width: 100%;
+      margin-top: 45px;
+      background: $color-f;
+      .ui-title {
+        background: $color-f0;
+        img.right {
+          height: 20px;
+          margin-top: 10px;
+        }
+      }
+      .list {
+        padding: 5px 7px;
+        > li {
+          display: block;
+          float: left;
+          width: 21%;
+          height: 25px;
+          margin: 5px 2%;
+          border: solid 1px $color-c;
+          border-radius: 3px;
+          line-height: 25px;
+          text-align: center;
+          font-size: 12px;
+          color: $color-79;
+          &.active {
+            border: none;
+            color: $color-auxiliary;
+          }
+        }
+        &:after {
+          display: block;
+          clear: both;
+          content: '';
+        }
+      }
+    }
+  }
+  .main {
+    .banner-img {
+      width: 95%;
+      margin: 15px auto;
+      text-align: center;
+    }
+    .list {
+      width: 100%;
+      @extend .clear;
+      > li {
+        display: block;
+        float: left;
+        width: 49%;
+        height: 250px;
+        margin-bottom: 10px;
+        background: $color-f;
+        margin-left: 1%;
+        margin-right: 0;
+        &:nth-child(odd) {
+          margin-left: 0;
+          margin-right: 1%;
+        }
+        > .pic {
+          display: block;
+          width: 100%;
+          height: 185px;
+        }
+        > h4 {
+          width: 100%;
+          height: 30px;
+          margin-top: 5px;
+          line-height: 30px;
+          font-size: 14px;
+          text-align: center;
+          @extend .ellipsis;
+        }
+        > .price {
+          width: 100%;
+          height: 20px;
+          line-height: 20px;
+          font-size: 14px;
+          text-align: center;
+          @extend .ellipsis;
+          color: $color-auxiliary;
+          > i {
+            margin-left: 5px;
+            color: $color-79;
+            text-decoration: line-through;
+          }
+        }
 
+      }
+    }
+
+  }
 }

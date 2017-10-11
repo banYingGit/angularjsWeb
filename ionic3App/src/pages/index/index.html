@@ -59,7 +59,7 @@
 
     </div>
     <div class="tab-card">
-      <ion-slides autoplay="2000" loop parallax='true' slidesPerView="1.2" centeredSlides
+      <ion-slides autoplay="2000" loop parallax='true' slidesPerView="1.2" centeredSlides  spaceBetween="30"
                   *ngIf="tabConData.length>0">
         <ion-slide *ngFor="let items of  tabConData">
           <div class="tab-card-con" (click)="goMasterPage(items.id)">

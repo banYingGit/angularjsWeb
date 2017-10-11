@@ -1,9 +1,3 @@
-<!--
-  Generated template for the MarketPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -12,7 +6,47 @@
 
 </ion-header>
 
-
-<ion-content padding>
-
+<ion-content>
+  <div class="tab-bar">
+    <ion-slides slidesPerView="6" *ngIf="tabBarData.length>0">
+      <ion-slide *ngFor="let items of  tabBarData">
+        <p class="tab-bar-p" [id]="items.id" [ngClass]="{'active':isTabActive == items.id}"
+           (click)="clickGet(items.id)">{{items.title}}</p>
+      </ion-slide>
+    </ion-slides>
+    <div class="drop" (click)="isShowSlide=true"><img src="../../assets/icon/icon4-1.png"/></div>
+  </div>
+  <div class="slide-pop" *ngIf="isShowSlide">
+    <div class="slide-pop-con">
+      <ion-title class="ui-title"><img src="../../assets/icon/icon4-1.png" class="right" (click)="isShowSlide=false"/>
+        切换栏目
+      </ion-title>
+      <ul class="list" *ngIf="tabBarData.length>0">
+        <li *ngFor="let items of  tabBarData,let idx=index" [id]="items.id"
+            [ngClass]="{'active':isTabActive == items.id}"
+            (click)="clickPopGet(items.id,idx)">
+          {{items.title}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="main">
+    <ion-slides autoplay="2000" loop parallax='true' slidesPerView="1.2" centeredSlides
+                *ngIf="slidesImg.length>0">
+      <ion-slide *ngFor="let items of  slidesImg">
+        <div class="banner-img" (click)="goDetail(items.id)"><img [src]="items.proImg"/></div>
+      </ion-slide>
+    </ion-slides>
+    <ul *ngIf="listData.length>0" class="list">
+      <li *ngFor="let items of  listData" (click)="goDetail(items.id)">
+        <img [src]="items.proImg" class="pic"/>
+        <h4>{{items.title}}</h4>
+        <div class="price">￥{{items.price}}<i>￥{{items.priceOld}}</i></div>
+      </li>
+    </ul>
+  </div>
+  <ion-infinite-scroll (ionInfinite)="doRefresh($event)">
+    <ion-infinite-scroll-content>
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
