@@ -14,16 +14,30 @@ import{GoodsPropertyService} from './goods-property.service'
   templateUrl: 'goods-property.html',
 })
 export class GoodsPropertyPage {
+  goodsId = ''
   loading: any;
+  listData = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public goodsPropertyService: GoodsPropertyService, public loadingCtrl: LoadingController) {
 
     this.loading = this.loadingCtrl.create();
+    this.goodsId = navParams.get('id');
   }
 
   ionViewDidLoad() {
     this.loading.present();
-    this.loading.dismiss();
+
+    var $this = this;
+
+    var dataUrl = './assets/data/goodsProperty.json';
+    var param = {"id": this.goodsId}
+    this.goodsPropertyService
+      .getData(dataUrl, param)
+      .then(function (data) {
+        $this.listData = data.items;
+        $this.loading.dismiss();
+      });
+
     console.log('ionViewDidLoad GoodsPropertyPage');
   }
 

@@ -31,7 +31,7 @@ export class GoodsDetailsPage {
     this.loading = this.loadingCtrl.create();
 
     this.goodsId = navParams.get('id');
-    console.log('this.pageId', this.goodsId)
+    console.log('this.goodsId', this.goodsId)
 
   }
 
@@ -64,17 +64,18 @@ export class GoodsDetailsPage {
   }
 
   goEvaluate() {
-    this.navCtrl.push(GoodsEvaluatePage, this.goodsId)
+    this.navCtrl.push(GoodsEvaluatePage, {id: this.goodsId})
   }
 
   goProperty() {
-    this.navCtrl.push(GoodsPropertyPage, this.goodsId)
+    this.navCtrl.push(GoodsPropertyPage, {id: this.goodsId})
   }
 
   addCar() {
     let toast = this.toastCtrl.create({
       message: '添加成功',
-      duration: 2000
+      duration: 2000,
+      position: 'middle'
     });
     toast.present();
   }
