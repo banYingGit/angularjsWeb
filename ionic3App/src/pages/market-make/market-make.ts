@@ -16,6 +16,8 @@ import{MarketMakeService} from './market.service'
 export class MarketMakePage {
 
   loading: any;
+  topValue = ''
+  bottomValue = ''
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public marketMakeService: MarketMakeService, public loadingCtrl: LoadingController) {
 

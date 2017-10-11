@@ -1,3 +1,101 @@
 page-market-make {
+  .content {
+    background: $color-f0;
+  }
+  .make-img {
+    padding: 15px;
+    > img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .panel {
+    background: $color-f;
+    .ui-title {
+      border-bottom: solid 1px $color-f0;
+      span {
+        color: $color-9;
+        font-size: 12px;
+      }
+    }
+    .choose {
+      margin: 0 15px;
+      padding-bottom: 15px;
+      border-bottom: solid 1px $color-f0;
+      .list {
+        margin: 0;
+        @extend .clear;
+        .item {
+          padding: 0;
+          border: none;
+          .item-inner {
+            border: none;
+          }
+        }
+        .item-radio {
+          float: left;
+          width: 40%;
+          height: 35px;
+          min-height: 35px;
+          font-size: 12px;
+          .label {
 
+            height: 35px;
+            line-height: 35px;
+            border-radius: 3px;
+            text-align: center;
+            background: $color-f0;
+
+          }
+
+        }
+
+        .item-radio-checked {
+          .label {
+            color: $color-f;
+            background: $color-default;
+          }
+          .radio-checked {
+            display: none;
+          }
+        }
+        .radio {
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+    .add-mes {
+      margin: 0 15px 20px 15px;
+      .list {
+        margin: 0;
+        @extend .clear;
+        .item {
+          padding: 0;
+          border-top: none;
+
+          min-height: 35px;
+
+          .item-inner {
+            border-bottom-color: $color-f0;
+          }
+          .label, .text-input {
+            font-size: 14px;
+            color: $color-9;
+          }
+          &:nth-last-child(1), &:nth-last-child(1) .item-inner {
+            border: none;
+          }
+        }
+
+      }
+
+    }
+  }
 }
