@@ -1,12 +1,9 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams, LoadingController, ToastController} from 'ionic-angular';
 import{GoodsDetailsService} from './goods-details.service'
-/**
- * Generated class for the GoodsDetailsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {MarketMakePage} from '../market-make/market-make';
+import {GoodsEvaluatePage} from '../goods-evaluate/goods-evaluate';
+import {GoodsPropertyPage} from '../goods-property/goods-property';
 
 @IonicPage()
 @Component({
@@ -15,15 +12,70 @@ import{GoodsDetailsService} from './goods-details.service'
 })
 export class GoodsDetailsPage {
 
+  goodsId = '';
   loading: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public goodsDetailsService: GoodsDetailsService, public loadingCtrl: LoadingController) {
+  slideList = [];
+  title = '';
+  price = '';
+  num = '';
+  type = '';
+  spec = '';
+  material = '';
+  color = '';
+  brand = '';
+  production = '';
+  detail = {}
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public goodsDetailsService: GoodsDetailsService, public loadingCtrl: LoadingController, public toastCtrl: ToastController) {
 
     this.loading = this.loadingCtrl.create();
-  }
-  ionViewDidLoad() {
-    this.loading.present();
-    this.loading.dismiss();
-    console.log('ionViewDidLoad GoodsDetailsPage');
+
+    this.goodsId = navParams.get('id');
+    console.log('this.pageId', this.goodsId)
+
   }
 
+  ionViewDidLoad() {
+    this.loading.present();
+    var $this = this;
+    var dataUrl = './assets/data/GoodsDetails.json';
+    var param = ''
+    this.goodsDetailsService
+      .getData(dataUrl, param)
+      .then(function (data) {
+        $this.slideList = data.slideList;
+        $this.title = data.title
+        $this.price = data.price
+        $this.num = data.num
+        $this.type = data.type
+        $this.spec = data.spec
+        $this.material = data.material
+        $this.color = data.color
+        $this.brand = data.brand
+        $this.production = data.production
+        $this.detail = data.detail
+        $this.loading.dismiss();
+      });
+
+  }
+
+  goMake() {
+    this.navCtrl.push(MarketMakePage)
+  }
+
+  goEvaluate() {
+    this.navCtrl.push(GoodsEvaluatePage, this.goodsId)
+  }
+
+  goProperty() {
+    this.navCtrl.push(GoodsPropertyPage, this.goodsId)
+  }
+
+  addCar() {
+    let toast = this.toastCtrl.create({
+      message: '添加成功',
+      duration: 2000
+    });
+    toast.present();
+  }
 }

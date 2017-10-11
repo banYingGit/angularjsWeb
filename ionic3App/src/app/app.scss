@@ -49,6 +49,10 @@ h1, h2, h3, h4, h5, p, ul, li, i {
   float: left;
 }
 
+.m-t-15 {
+  margin-top: 15px;
+}
+
 .grid {
   padding: 0;
 }
@@ -155,4 +159,16 @@ h1, h2, h3, h4, h5, p, ul, li, i {
   }
 }
 
+.toast-wrapper {
+  max-width: 100px !important;
+  height: 35px;
+  line-height: 35px;
+  background: #dcdbd9 !important;
+  border-radius: 17px !important;
+  text-align: center;
+  .toast-message {
+    padding: 0;
+    color: $color-3;
+  }
+}
 

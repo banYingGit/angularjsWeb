@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { GoodsDetailsPage } from './goods-details';
+import {NgModule} from '@angular/core';
+import {IonicPageModule} from 'ionic-angular';
+import {GoodsDetailsPage} from './goods-details';
 
 @NgModule({
   declarations: [
@@ -10,4 +10,16 @@ import { GoodsDetailsPage } from './goods-details';
     IonicPageModule.forChild(GoodsDetailsPage),
   ],
 })
-export class GoodsDetailsPageModule {}
+export class GoodsDetailsPageModule {
+  slideList: Array<string>;
+  title: string;
+  price: string;
+  num: string;
+  type: string;
+  spec: string;
+  material: string;
+  color: string;
+  brand: string;
+  production: string;
+  detail: object
+}
