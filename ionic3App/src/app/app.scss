@@ -176,3 +176,44 @@ h1, h2, h3, h4, h5, p, ul, li, i {
   }
 }
 
+.num-box {
+  position: relative;
+  width: 100px;
+  height: 35px;
+  border: solid 1px $color-f0;
+  background: $color-f;
+  > .add, > .reduce {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 35px;
+    width: 33.3333%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 18px;
+    color: $color-79;
+  }
+  > .add {
+    right: -1px;
+    border-left: solid 1px $color-f0;
+  }
+  > .reduce {
+    left: -1px;
+    border-right: solid 1px $color-f0;
+  }
+  > .input {
+    display: block;
+    margin: 0 auto;
+    width: 33.3333%;
+    height: 35px;
+    text-align: center;
+    .text-input {
+      display: block;
+      height: 35px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 35px;
+    }
+  }
+}
+

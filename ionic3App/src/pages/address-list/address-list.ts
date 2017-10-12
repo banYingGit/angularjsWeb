@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
-
+import {AddressListService} from './address-list.service';
 /**
  * Generated class for the AddressListPage page.
  *
@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 })
 export class AddressListPage {
   loading: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public addressListService: AddressListService) {
 
     this.loading = this.loadingCtrl.create();
   }

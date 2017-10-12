@@ -1,0 +1,37 @@
+{
+  "code": "1",
+  "itemsObj": [
+    {
+      "id": "list1",
+      "proImg": "../../assets/icon/cur/banner1.png",
+      "title": "平安大吉满堂春",
+      "color": "金色",
+      "num": "1",
+      "price": "1688"
+    },
+    {
+      "id": "list2",
+      "proImg": "../../assets/icon/cur/img12.jpg",
+      "title": "巅峰玉雕",
+      "color": "金色",
+      "num": "3",
+      "price": "2000"
+    },
+    {
+      "id": "list3",
+      "proImg": "../../assets/icon/cur/img11.jpg",
+      "title": "巅峰玉雕，至尚臻品",
+      "color": "金色",
+      "num": "1",
+      "price": "1000"
+    },
+    {
+      "id": "list4",
+      "proImg": "../../assets/icon/cur/banner2.png",
+      "title": "时来运转水晶球",
+      "color": "金色",
+      "num": "2",
+      "price": "1500"
+    }
+  ]
+}

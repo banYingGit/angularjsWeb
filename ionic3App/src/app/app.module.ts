@@ -23,7 +23,6 @@ import {MarketMakePage} from '../pages/market-make/market-make';
 import {GoodsDetailsPage} from '../pages/goods-details/goods-details';
 import {GoodsEvaluatePage} from '../pages/goods-evaluate/goods-evaluate';
 import {GoodsPropertyPage} from '../pages/goods-property/goods-property';
-
 import {OrderSurePage} from '../pages/order-sure/order-sure';
 import {AddressListPage} from '../pages/address-list/address-list';
 import {AddressPage} from '../pages/address/address';
@@ -44,7 +43,8 @@ import {MarketMakeService} from '../pages/market-make/market.service';
 import {GoodsDetailsService} from '../pages/goods-details/goods-details.service';
 import {GoodsPropertyService} from '../pages/goods-property/goods-property.service';
 import {GoodsEvaluateService} from '../pages/goods-evaluate/goods-evaluate.service';
-
+import {CarService} from '../pages/car/car.service';
+import {AddressListService} from '../pages/address-list/address-list.service';
 
 @NgModule({
   declarations: [
@@ -113,7 +113,9 @@ import {GoodsEvaluateService} from '../pages/goods-evaluate/goods-evaluate.servi
     MarketMakeService,
     GoodsDetailsService,
     GoodsPropertyService,
-    GoodsEvaluateService
+    GoodsEvaluateService,
+    CarService,
+    AddressListService
   ]
 })
 export class AppModule {
