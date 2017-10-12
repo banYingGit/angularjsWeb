@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
 import{MarketMakeService} from './market.service'
+import {OrderSurePage} from '../order-sure/order-sure';
 /**
  * Generated class for the MarketMakePage page.
  *
@@ -28,6 +29,10 @@ export class MarketMakePage {
     this.loading.present();
     this.loading.dismiss();
     console.log('ionViewDidLoad MarketMakePage');
+  }
+
+  goOrder() {
+    this.navCtrl.push(OrderSurePage, {state: 1})
   }
 
 }

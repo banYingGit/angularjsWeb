@@ -24,6 +24,13 @@ import {GoodsDetailsPage} from '../pages/goods-details/goods-details';
 import {GoodsEvaluatePage} from '../pages/goods-evaluate/goods-evaluate';
 import {GoodsPropertyPage} from '../pages/goods-property/goods-property';
 
+import {OrderSurePage} from '../pages/order-sure/order-sure';
+import {AddressListPage} from '../pages/address-list/address-list';
+import {AddressPage} from '../pages/address/address';
+import {CarPage} from '../pages/car/car';
+import {PaymentPage} from '../pages/payment/payment';
+import {InvoicePage} from '../pages/invoice/invoice';
+
 
 /*service*/
 import {IndexService} from '../pages/index/index.service';
@@ -55,7 +62,13 @@ import {GoodsEvaluateService} from '../pages/goods-evaluate/goods-evaluate.servi
     MarketMakePage,
     GoodsDetailsPage,
     GoodsEvaluatePage,
-    GoodsPropertyPage
+    GoodsPropertyPage,
+    OrderSurePage,
+    AddressListPage,
+    AddressPage,
+    CarPage,
+    PaymentPage,
+    InvoicePage
   ],
   imports: [
     BrowserModule,
@@ -78,7 +91,13 @@ import {GoodsEvaluateService} from '../pages/goods-evaluate/goods-evaluate.servi
     MarketMakePage,
     GoodsDetailsPage,
     GoodsEvaluatePage,
-    GoodsPropertyPage
+    GoodsPropertyPage,
+    OrderSurePage,
+    AddressListPage,
+    AddressPage,
+    CarPage,
+    PaymentPage,
+    InvoicePage
   ],
   providers: [
     StatusBar,
