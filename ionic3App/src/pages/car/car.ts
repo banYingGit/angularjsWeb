@@ -18,10 +18,8 @@ export class CarPage {
   loading: any;
   listData = []
   isEdit = false
-  a = ''
-  b = ''
-  c = ''
-  allse = false
+  isCs = false
+  isAll = false
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public carService: CarService) {
 
@@ -45,8 +43,25 @@ export class CarPage {
 
   }
 
-  allSelect(val) {
+  chooseAll() {
 
+    for (var i = 0; i < this.listData.length; i++) {
+      console.log('this.isEdit', this.isEdit)
+      if (this.isAll == false) {
+
+        this.listData[i].isCs = false
+
+      } else if (this.isAll == true) {
+
+        this.listData[i].isCs = true
+
+      }
+    }
+
+  }
+
+  choose(items) {
+    console.log('choose>items', items)
   }
 
   doEdit() {

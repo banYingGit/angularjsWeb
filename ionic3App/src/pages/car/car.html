@@ -13,7 +13,7 @@
     <ul class="car-list" *ngIf="listData.length>0" [ngClass]="{'edit':isEdit == true}">
       <li *ngFor="let items of  listData">
         <div class="choose">
-          <ion-checkbox [(ngModel)]="items.id"></ion-checkbox>
+          <ion-checkbox [(ngModel)]="items.isCs" (click)="choose(items)"></ion-checkbox>
         </div>
         <img [src]="items.proImg" class="picImg"/>
         <h2 class="title">{{items.title}}</h2>
@@ -23,14 +23,12 @@
         <p class="price">￥{{items.price}}</p>
       </li>
     </ul>
-
-
   </div>
   <div class="foot-btn">
 
     <ion-item>
       <ion-label>全选</ion-label>
-      <ion-checkbox [(ngModel)]="allse"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="isAll" (click)="chooseAll()"></ion-checkbox>
     </ion-item>
     <div class="total-amount">合计：¥ {{totalAmount}}元</div>
 

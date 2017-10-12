@@ -7,7 +7,8 @@
       "title": "平安大吉满堂春",
       "color": "金色",
       "num": "1",
-      "price": "1688"
+      "price": "1688",
+      "isCs": false
     },
     {
       "id": "list2",
@@ -15,7 +16,8 @@
       "title": "巅峰玉雕",
       "color": "金色",
       "num": "3",
-      "price": "2000"
+      "price": "2000",
+      "isCs": false
     },
     {
       "id": "list3",
@@ -23,7 +25,8 @@
       "title": "巅峰玉雕，至尚臻品",
       "color": "金色",
       "num": "1",
-      "price": "1000"
+      "price": "1000",
+      "isCs": false
     },
     {
       "id": "list4",
@@ -31,7 +34,8 @@
       "title": "时来运转水晶球",
       "color": "金色",
       "num": "2",
-      "price": "1500"
+      "price": "1500",
+      "isCs": false
     }
   ]
 }

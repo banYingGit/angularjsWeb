@@ -20,4 +20,5 @@ export class ObjectModule {
   color: string;
   num: string;
   price: string
+  isCs: boolean
 }
