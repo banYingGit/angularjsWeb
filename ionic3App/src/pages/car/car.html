@@ -19,14 +19,9 @@
         <h2 class="title">{{items.title}}</h2>
         <p class="color">{{items.color}}</p>
         <p class="num">X {{items.num}}</p>
-        <div class="num-box">
-          <div class="add">+</div>
-          <ion-input type="number"></ion-input>
-          <div class="reduce">-</div>
-        </div>
+        <number-box></number-box>
         <p class="price">￥{{items.price}}</p>
       </li>
-
     </ul>
 
 
@@ -35,7 +30,7 @@
 
     <ion-item>
       <ion-label>全选</ion-label>
-      <ion-checkbox [(ngModel)]="allse" (click)="allSelect(allse)"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="allse"></ion-checkbox>
     </ion-item>
     <div class="total-amount">合计：¥ {{totalAmount}}元</div>
 

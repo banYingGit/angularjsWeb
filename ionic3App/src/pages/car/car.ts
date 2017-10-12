@@ -11,7 +11,7 @@ import {CarService} from './car.service';
 @IonicPage()
 @Component({
   selector: 'page-car',
-  templateUrl: 'car.html',
+  templateUrl: 'car.html'
 })
 export class CarPage {
 
@@ -21,7 +21,7 @@ export class CarPage {
   a = ''
   b = ''
   c = ''
-  allse = []
+  allse = false
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public carService: CarService) {
 
@@ -46,7 +46,7 @@ export class CarPage {
   }
 
   allSelect(val) {
-    this.allse = [this.a, this.b, this.c]
+
   }
 
   doEdit() {

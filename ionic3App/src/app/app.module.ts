@@ -46,6 +46,8 @@ import {GoodsEvaluateService} from '../pages/goods-evaluate/goods-evaluate.servi
 import {CarService} from '../pages/car/car.service';
 import {AddressListService} from '../pages/address-list/address-list.service';
 
+import {NumberBoxComponent} from '../components/number-box/number-box';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -68,7 +70,8 @@ import {AddressListService} from '../pages/address-list/address-list.service';
     AddressPage,
     CarPage,
     PaymentPage,
-    InvoicePage
+    InvoicePage,
+    NumberBoxComponent
   ],
   imports: [
     BrowserModule,
