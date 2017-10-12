@@ -15,14 +15,14 @@ import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angu
 })
 export class AddressPage {
 
-  state = ''
+  adressState = ''
   loading: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
 
     //state:1为新建过来的页面，0为编辑过来的页面
-    this.state = navParams.get('state');
-    console.log('state:1为新建过来的页面，0为编辑过来的页面', this.state)
+    this.adressState = navParams.get('adressState');
+    console.log('adressState:1为新建过来的页面，0为编辑过来的页面', this.adressState)
 
     this.loading = this.loadingCtrl.create();
 

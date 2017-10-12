@@ -1,4 +1,3 @@
-
 <ion-header>
 
   <ion-navbar>
@@ -9,5 +8,73 @@
 
 
 <ion-content>
-  <div class="panel"></div>
+  <div class="panel">
+    <div class="floor1" (click)="goAddress()">
+      <div class="name">{{user.name}}<i *ngIf="user.default">默认</i></div>
+      <div class="tel">{{user.tel}}</div>
+      <div class="address">{{user.address}}</div>
+      <img src="../../assets/icon/icon2.png" class="icon"/>
+    </div>
+  </div>
+  <div class="panel m-t-15">
+    <div class="floor2">
+      <ion-title class="ui-title">定制内容留言区</ion-title>
+      <div class="goods">
+        <img [src]="goods.pic" class="pic"/>
+        <h2 class="title">{{goods.title}}</h2>
+        <p class="color">{{goods.color}}</p>
+        <p class="num">X{{goods.num}}</p>
+        <p class="price">￥{{goods.price}}</p>
+      </div>
+      <ion-item>
+        <ion-label>备注</ion-label>
+        <ion-input placeholder="还有什么要对商家说的吗?"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+  <div class="panel  m-t-15" *ngIf="this.state==1">
+    <div class="floor3">
+      <ion-title class="ui-title">定制工艺<span class="right">{{make.topValue}}，{{make.bottomValue}}</span></ion-title>
+      <div class="detail">
+        <h3>定制内容留言</h3>
+        <div class="line"><span class="left">玉扣</span><span class="right">{{make.topText}}</span></div>
+        <div class="line"><span class="left">底座</span><span class="right">{{make.bottomText}}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="panel  m-t-15">
+    <div class="floor4">
+      <ion-list>
+        <ion-item>
+          商品金额
+          <ion-note item-end>
+            ¥1688
+          </ion-note>
+        </ion-item>
+        <ion-item *ngIf="this.state==1">
+          定制费用
+          <ion-note item-end>
+            ¥1000
+          </ion-note>
+        </ion-item>
+        <ion-item>
+          运费
+          <ion-note item-end>
+            ¥0
+          </ion-note>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+  <div class="panel  m-t-15">
+    <div class="floor5">开具发票
+      <img src="../../assets/icon/icon2.png" class="icon" (click)="goInvoice()"/>
+    </div>
+  </div>
+  <div class="foot-btn">
+    <div class="price">实际金额
+      <span>¥{{totalAmount}}</span>
+    </div>
+    <button ion-button (click)="goPayment(totalAmount)">立即下单</button>
+  </div>
 </ion-content>

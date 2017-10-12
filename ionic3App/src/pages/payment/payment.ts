@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams , LoadingController} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
 
 /**
  * Generated class for the PaymentPage page.
@@ -15,8 +15,13 @@ import { IonicPage, NavController, NavParams , LoadingController} from 'ionic-an
 })
 export class PaymentPage {
   loading: any;
+  totalAmount = '';
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
     this.loading = this.loadingCtrl.create();
+
+    this.totalAmount = navParams.get('totalAmount');
+    console.log('付款总金额', this.totalAmount)
 
   }
 

@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
-
+import {AddressPage} from '../address/address';
+import {InvoicePage} from '../invoice/invoice';
+import {PaymentPage} from '../payment/payment';
 /**
  * Generated class for the OrderSurePage page.
  *
@@ -15,8 +17,29 @@ import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angu
 })
 export class OrderSurePage {
 
-  state = ''
+  state = '';
   loading: any;
+  user = {
+    'name': 'Mr.zhang',
+    'tel': '15631739055',
+    'address': '广东省，深圳市，福田区 海滨广场',
+    'default': true
+  };
+  goods = {
+    'pic': '../../assets/icon/cur/img13.jpg',
+    'title': '平安大吉满堂春',
+    'color': '金色',
+    'num': '1',
+    'price': '1688'
+  };
+  make = {
+    'topValue': '玉扣进口转印（¥900）',
+    'bottomValue': '底座丝印（¥100）',
+    'topText': '玉高山仰止,景行行止',
+    'bottomText': '景行行止',
+
+  };
+  totalAmount = '2888';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
 
@@ -31,6 +54,21 @@ export class OrderSurePage {
     console.log('ionViewDidLoad OrderSurePage');
     this.loading.present();
     this.loading.dismiss();
+  }
+
+  //跳转到地址编辑页面->adressState: '0'
+  goAddress() {
+    this.navCtrl.push(AddressPage, {adressState: '0'})
+  }
+
+  //开具发票
+  goInvoice() {
+    this.navCtrl.push(InvoicePage)
+  }
+
+  //付款
+  goPayment(totalAmount) {
+    this.navCtrl.push(PaymentPage, {totalAmount: totalAmount})
   }
 
 }
