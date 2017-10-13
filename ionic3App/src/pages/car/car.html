@@ -19,7 +19,7 @@
         <h2 class="title">{{items.title}}</h2>
         <p class="color">{{items.color}}</p>
         <p class="num">X {{items.num}}</p>
-        <number-box></number-box>
+        <number-box [(ngModel)]='items.num'></number-box>
         <p class="price">￥{{items.price}}</p>
       </li>
     </ul>

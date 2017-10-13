@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
 import {CarService} from './car.service';
+import {OrderSurePage} from '../order-sure/order-sure';
 /**
  * Generated class for the CarPage page.
  *
@@ -20,6 +21,8 @@ export class CarPage {
   isEdit = false
   isCs = false
   isAll = false
+  numVal = '';
+  totalAmount = '3880'
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public carService: CarService) {
 
@@ -43,10 +46,12 @@ export class CarPage {
 
   }
 
+  //全选
   chooseAll() {
 
     for (var i = 0; i < this.listData.length; i++) {
-      console.log('this.isEdit', this.isEdit)
+
+
       if (this.isAll == false) {
 
         this.listData[i].isCs = false
@@ -60,17 +65,45 @@ export class CarPage {
 
   }
 
+//单选
   choose(items) {
-    console.log('choose>items', items)
+
+    var $arr = [];
+
+    for (var i = 0; i < this.listData.length; i++) {
+
+      if (this.listData[i].isCs == false) {
+
+        this.isAll = false
+
+      } else {
+
+        $arr.push(this.listData[i].isCs);
+
+        this.isAll = $arr.length > i ? true : false
+
+      }
+    }
   }
 
   doEdit() {
 
     if (this.isEdit) {
       this.isEdit = false
+
     } else {
       this.isEdit = true
+      for (var i = 0; i < this.listData.length; i++) {
+
+        this.numVal = this.listData[i].num
+
+        console.log('this.numVal', this.numVal)
+
+      }
     }
-    console.log('this.isEdit', this.isEdit)
+  }
+
+  goOrder() {
+    this.navCtrl.push(OrderSurePage, {state: 0})
   }
 }

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import {Component, Input, forwardRef} from '@angular/core';
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms'
 /**
  * Generated class for the NumberBoxComponent component.
  *
@@ -8,15 +8,48 @@ import { Component } from '@angular/core';
  */
 @Component({
   selector: 'number-box',
-  templateUrl: 'number-box.html'
+  templateUrl: 'number-box.html',
+  providers: [{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => NumberBoxComponent),
+    multi: true
+  }]
 })
-export class NumberBoxComponent {
+export class NumberBoxComponent implements ControlValueAccessor {
 
-  text: string;
+  @Input() numVal: number;
+  private propagateChange: any = {};
+
 
   constructor() {
-    console.log('Hello NumberBoxComponent Component');
-    this.text = 'Hello World';
+
+  }
+
+  increment() {
+    this.numVal++;
+    this.propagateChange(this.numVal);//值传递
+  }
+
+  decrement() {
+    this.numVal = this.numVal === 1 ? 1 : this.numVal - 1;
+    this.propagateChange(this.numVal);//值传递
+  }
+
+  writeValue(val: number): void {
+    if (val) {
+      this.numVal = val;
+    }
+  }
+
+  registerOnChange(fn: any): void {
+    this.propagateChange = fn;
+  }
+
+  registerOnTouched(fn: any): void {
+  }
+
+  setDisabledState?(isDisabled: boolean): void {
   }
 
 }
+
