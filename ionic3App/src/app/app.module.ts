@@ -51,8 +51,6 @@ import {AddressChooseService} from '../pages/address-choose/address-choose.servi
 
 /*组件*/
 import {NumberBoxComponent} from '../components/number-box/number-box';
-import {CityPickerComponent} from '../components/city-picker/city-picker';
-import {CityPickerService} from '../components/city-picker/ciyt-picker.service';
 
 @NgModule({
   declarations: [
@@ -79,7 +77,6 @@ import {CityPickerService} from '../components/city-picker/ciyt-picker.service';
     InvoicePage,
     AddressChoosePage,
     NumberBoxComponent,
-    CityPickerComponent
   ],
   imports: [
     BrowserModule,
@@ -129,7 +126,6 @@ import {CityPickerService} from '../components/city-picker/ciyt-picker.service';
     CarService,
     AddressListService,
     AddressChooseService,
-    CityPickerService
   ]
 })
 export class AppModule {

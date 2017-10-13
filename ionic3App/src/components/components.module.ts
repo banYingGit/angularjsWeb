@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { NumberBoxComponent } from './number-box/number-box';
-import { CityPickerComponent } from './city-picker/city-picker';
 @NgModule({
-	declarations: [NumberBoxComponent,
-    CityPickerComponent],
+	declarations: [NumberBoxComponent],
 	imports: [],
-	exports: [NumberBoxComponent,
-    CityPickerComponent]
+	exports: [NumberBoxComponent]
 })
 export class ComponentsModule {}

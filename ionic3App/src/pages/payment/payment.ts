@@ -16,6 +16,7 @@ import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angu
 export class PaymentPage {
   loading: any;
   totalAmount = '';
+  payWay = ''
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
     this.loading = this.loadingCtrl.create();

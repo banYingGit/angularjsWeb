@@ -90,7 +90,9 @@ export class AddressPage {
           text: '确认',
           handler: function () {
 
-            $this.navCtrl.pop()
+            var param = {};
+
+            $this.navCtrl.push(AddressListPage, param)
           }
         }
       ]

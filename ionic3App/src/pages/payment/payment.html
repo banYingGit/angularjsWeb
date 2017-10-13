@@ -1,9 +1,3 @@
-<!--
-  Generated template for the PaymentPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -13,6 +7,32 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <div class="panel">
+    <div class="money">
+      需要支付<span class="right">￥ {{totalAmount}}</span>
+    </div>
+  </div>
+  <div class="panel">
 
+    <ion-list radio-group [(ngModel)]="payWay">
+
+      <ion-list-header>
+        请选择第三方支付
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label><img src="../../assets/icon/c_icon2.png"/>微信支付</ion-label>
+        <ion-radio value="weixin"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><img src="../../assets/icon/c_icon3.png"/> 支付宝</ion-label>
+        <ion-radio value="zhifubao"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div class="foot-btn">
+    <button ion-button>确认支付</button>
+  </div>
 </ion-content>
