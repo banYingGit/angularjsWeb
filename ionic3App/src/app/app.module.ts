@@ -26,6 +26,7 @@ import {GoodsPropertyPage} from '../pages/goods-property/goods-property';
 import {OrderSurePage} from '../pages/order-sure/order-sure';
 import {AddressListPage} from '../pages/address-list/address-list';
 import {AddressPage} from '../pages/address/address';
+import {AddressChoosePage} from '../pages/address-choose/address-choose';
 import {CarPage} from '../pages/car/car';
 import {PaymentPage} from '../pages/payment/payment';
 import {InvoicePage} from '../pages/invoice/invoice';
@@ -45,8 +46,13 @@ import {GoodsPropertyService} from '../pages/goods-property/goods-property.servi
 import {GoodsEvaluateService} from '../pages/goods-evaluate/goods-evaluate.service';
 import {CarService} from '../pages/car/car.service';
 import {AddressListService} from '../pages/address-list/address-list.service';
+import {AddressChooseService} from '../pages/address-choose/address-choose.service';
 
+
+/*组件*/
 import {NumberBoxComponent} from '../components/number-box/number-box';
+import {CityPickerComponent} from '../components/city-picker/city-picker';
+import {CityPickerService} from '../components/city-picker/ciyt-picker.service';
 
 @NgModule({
   declarations: [
@@ -71,7 +77,9 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     CarPage,
     PaymentPage,
     InvoicePage,
-    NumberBoxComponent
+    AddressChoosePage,
+    NumberBoxComponent,
+    CityPickerComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +108,8 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     AddressPage,
     CarPage,
     PaymentPage,
-    InvoicePage
+    InvoicePage,
+    AddressChoosePage
   ],
   providers: [
     StatusBar,
@@ -118,7 +127,9 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     GoodsPropertyService,
     GoodsEvaluateService,
     CarService,
-    AddressListService
+    AddressListService,
+    AddressChooseService,
+    CityPickerService
   ]
 })
 export class AppModule {

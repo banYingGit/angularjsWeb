@@ -1,0 +1,94 @@
+{
+  "code": "1",
+  "itemsObj": [
+    {
+      "id": "area1",
+      "name": "区1",
+      "child": false,
+      "level": "3"
+    },
+    {
+      "id": "area2",
+      "name": "区1",
+      "child": false,
+      "level": "3"
+    },
+    {
+      "id": "area3",
+      "name": "区2",
+      "child": false,
+      "level": "3"
+    },
+    {
+      "id": "area4",
+      "name": "区1",
+      "child": false,
+      "level": "3"
+    },
+    {
+      "id": "area5",
+      "name": "区1",
+      "child": false,
+      "level": "3"
+    },
+    {
+      "id": "area6",
+      "name": "区1",
+      "child": false,
+      "level": "3"
+    },
+    {
+      "id": "area7",
+      "name": "区1",
+      "child": false,
+      "level": "3"
+    },
+    {
+      "id": "area8",
+      "name": "区1",
+      "child": false,
+      "level": "3"
+    },
+    {
+      "id": "area9",
+      "name": "区1",
+      "child": false,
+      "level": "3"
+    },
+    {
+      "id": "area10",
+      "name": "区1",
+      "child": false,
+      "level": "3"
+    },
+    {
+      "id": "area11",
+      "name": "区1",
+      "child": false,
+      "level": "3"
+    },
+    {
+      "id": "area12",
+      "name": "区1",
+      "child": false,
+      "level": "3"
+    },
+    {
+      "id": "area13",
+      "name": "区1",
+      "child": true
+    },
+    {
+      "id": "area14",
+      "name": "区1",
+      "child": false,
+      "level": "3"
+    },
+    {
+      "id": "area15",
+      "name": "区1",
+      "child": false,
+      "level": "3"
+    }
+  ]
+}

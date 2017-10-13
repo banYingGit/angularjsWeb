@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
-import {AddressPage} from '../address/address';
+import {AddressListPage} from '../address-list/address-list';
 import {InvoicePage} from '../invoice/invoice';
 import {PaymentPage} from '../payment/payment';
 /**
@@ -22,7 +22,8 @@ export class OrderSurePage {
   user = {
     'name': 'Mr.zhang',
     'tel': '15631739055',
-    'address': '广东省，深圳市，福田区 海滨广场',
+    'address': '广东省，深圳市，福田区',
+    'addressDetail': '海滨广场',
     'default': true
   };
   goods = {
@@ -56,9 +57,11 @@ export class OrderSurePage {
     this.loading.dismiss();
   }
 
-  //跳转到地址编辑页面->adressState: '0'
+  //跳转到地址列表页面->
   goAddress() {
-    this.navCtrl.push(AddressPage, {adressState: '0'})
+
+    var param = {}
+    this.navCtrl.push(AddressListPage, param)
   }
 
   //开具发票
@@ -70,5 +73,6 @@ export class OrderSurePage {
   goPayment(totalAmount) {
     this.navCtrl.push(PaymentPage, {totalAmount: totalAmount})
   }
+
 
 }

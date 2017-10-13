@@ -176,5 +176,23 @@ h1, h2, h3, h4, h5, p, ul, li, i {
   }
 }
 
-
+.alert-wrapper {
+  border-radius: 5px !important;
+  .alert-head {
+    padding: 15px;
+  }
+  .alert-message {
+    line-height: 30px;
+    font-size: 15px;
+    color: $color-6;
+  }
+  .button-inner {
+    font-size: 15px;
+    font-weight: lighter;
+    color: $color-6;
+  }
+  .alert-button:last-child .button-inner {
+    color: $color-default;
+  }
+}
 

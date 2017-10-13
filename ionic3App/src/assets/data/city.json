@@ -1,0 +1,94 @@
+{
+  "code": "1",
+  "itemsObj": [
+    {
+      "id": "city1",
+      "name": "城市1",
+      "child":true,
+      "level":"2"
+    },
+    {
+      "id": "city2",
+      "name": "北京-区1",
+      "child":false,
+      "level":"2"
+    },
+    {
+      "id": "city3",
+      "name": "北京-区2",
+      "child":false,
+      "level":"2"
+    },
+    {
+      "id": "city4",
+      "name": "城市1",
+      "child":true,
+      "level":"2"
+    },
+    {
+      "id": "city5",
+      "name": "城市1",
+      "child":true,
+      "level":"2"
+    },
+    {
+      "id": "city6",
+      "name": "城市1",
+      "child":true,
+      "level":"2"
+    },
+    {
+      "id": "city7",
+      "name": "城市1",
+      "child":true,
+      "level":"2"
+    },
+    {
+      "id": "city8",
+      "name": "城市1",
+      "child":true,
+      "level":"2"
+    },
+    {
+      "id": "city9",
+      "name": "城市1",
+      "child":true,
+      "level":"2"
+    },
+    {
+      "id": "city10",
+      "name": "城市1",
+      "child":true,
+      "level":"2"
+    },
+    {
+      "id": "city11",
+      "name": "城市1",
+      "child":true,
+      "level":"2"
+    },
+    {
+      "id": "city12",
+      "name": "城市1",
+      "child":true,
+      "level":"2"
+    },
+    {
+      "id": "city13",
+      "name": "城市1",
+      "child":true
+    },
+    {
+      "id": "city14",
+      "name": "城市1",
+      "child":true,
+      "level":"2"
+    },
+    {
+      "id": "city15",
+      "name": "城市1",
+      "child":true,
+      "level":"2"
+    }
+  ]
+}

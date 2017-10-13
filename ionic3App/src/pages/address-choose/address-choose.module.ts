@@ -1,17 +1,16 @@
 import {NgModule} from '@angular/core';
 import {IonicPageModule} from 'ionic-angular';
-import {AddressListPage} from './address-list';
+import {AddressChoosePage} from './address-choose';
 
 @NgModule({
   declarations: [
-    AddressListPage,
+    AddressChoosePage,
   ],
   imports: [
-    IonicPageModule.forChild(AddressListPage),
+    IonicPageModule.forChild(AddressChoosePage),
   ],
 })
-export class AddressListPageModule {
-
+export class AddressChoosePageModule {
   itemsObj: Array<ObjectModule>;
 }
 export class ObjectModule {

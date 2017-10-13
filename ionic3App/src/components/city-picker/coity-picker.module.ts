@@ -1,17 +1,16 @@
 import {NgModule} from '@angular/core';
 import {IonicPageModule} from 'ionic-angular';
-import {AddressListPage} from './address-list';
+import {CityPickerComponent} from './city-picker';
 
 @NgModule({
   declarations: [
-    AddressListPage,
+    CityPickerComponent,
   ],
   imports: [
-    IonicPageModule.forChild(AddressListPage),
+    IonicPageModule.forChild(CityPickerComponent),
   ],
 })
-export class AddressListPageModule {
-
+export class CityPickerModule {
   itemsObj: Array<ObjectModule>;
 }
 export class ObjectModule {
@@ -20,3 +19,4 @@ export class ObjectModule {
   name: string;
 
 }
+

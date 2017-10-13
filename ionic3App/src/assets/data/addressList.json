@@ -1,0 +1,21 @@
+{
+  "code": "1",
+  "itemsObj": [
+    {
+      "id": "id1",
+      "name": "zhang.xiao",
+      "tel": "18874056855",
+      "address": "辽宁，大连市，沙河口区",
+      "addressDetail": "海滨广场",
+      "default": true
+    },
+    {
+      "id": "id2",
+      "name": "Mr.zhang33",
+      "tel": "15631739055",
+      "address": "广东省，深圳市，福田区",
+      "addressDetail": "星海广场",
+      "default": false
+    }
+  ]
+}
