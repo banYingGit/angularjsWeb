@@ -31,6 +31,17 @@ import {CarPage} from '../pages/car/car';
 import {PaymentPage} from '../pages/payment/payment';
 import {InvoicePage} from '../pages/invoice/invoice';
 
+import {OrderPromptPage} from '../pages/order-prompt/order-prompt';
+import {OrderDetailPage} from '../pages/order-detail/order-detail';
+import {ShareCodePage} from '../pages/share-code/share-code';
+import {UserSetPage} from '../pages/user-set/user-set';
+import {UserPage} from '../pages/user/user';
+import {UserMessagePage} from '../pages/user-message/user-message';
+import {SetPage} from '../pages/set/set';
+import {SystemMessagePage} from '../pages/system-message/system-message';
+import {CommissionPage} from '../pages/commission/commission';
+import {ParityPage} from '../pages/parity/parity';
+
 
 /*service*/
 import {IndexService} from '../pages/index/index.service';
@@ -47,6 +58,10 @@ import {GoodsEvaluateService} from '../pages/goods-evaluate/goods-evaluate.servi
 import {CarService} from '../pages/car/car.service';
 import {AddressListService} from '../pages/address-list/address-list.service';
 import {AddressChooseService} from '../pages/address-choose/address-choose.service';
+import {OrderDetailService} from '../pages/order-detail/order-detail.service';
+import {OrderPromptService} from '../pages/order-prompt/order-prompt.service';
+import {UserService} from '../pages/user/user.service';
+import {UserMessageService} from '../pages/user-message/user-message.service';
 
 
 /*组件*/
@@ -76,7 +91,18 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     PaymentPage,
     InvoicePage,
     AddressChoosePage,
+    OrderPromptPage,
+    OrderDetailPage,
+    ShareCodePage,
+    UserSetPage,
+    UserPage,
+    SetPage,
+    SystemMessagePage,
+    CommissionPage,
+    ParityPage,
+    UserMessagePage,
     NumberBoxComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -106,7 +132,17 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     CarPage,
     PaymentPage,
     InvoicePage,
-    AddressChoosePage
+    AddressChoosePage,
+    OrderPromptPage,
+    OrderDetailPage,
+    ShareCodePage,
+    UserSetPage,
+    UserPage,
+    SetPage,
+    SystemMessagePage,
+    CommissionPage,
+    ParityPage,
+    UserMessagePage
   ],
   providers: [
     StatusBar,
@@ -126,6 +162,10 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     CarService,
     AddressListService,
     AddressChooseService,
+    OrderPromptService,
+    OrderDetailService,
+    UserService,
+    UserMessageService
   ]
 })
 export class AppModule {
