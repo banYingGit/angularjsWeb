@@ -33,6 +33,7 @@ import {InvoicePage} from '../pages/invoice/invoice';
 
 import {OrderPromptPage} from '../pages/order-prompt/order-prompt';
 import {OrderDetailPage} from '../pages/order-detail/order-detail';
+import {OrderListPage} from '../pages/order-list/order-list';
 import {ShareCodePage} from '../pages/share-code/share-code';
 import {UserSetPage} from '../pages/user-set/user-set';
 import {UserPage} from '../pages/user/user';
@@ -60,6 +61,7 @@ import {AddressListService} from '../pages/address-list/address-list.service';
 import {AddressChooseService} from '../pages/address-choose/address-choose.service';
 import {OrderDetailService} from '../pages/order-detail/order-detail.service';
 import {OrderPromptService} from '../pages/order-prompt/order-prompt.service';
+import {OrderListService} from '../pages/order-list/order-list.service';
 import {UserService} from '../pages/user/user.service';
 import {UserMessageService} from '../pages/user-message/user-message.service';
 
@@ -93,6 +95,7 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     AddressChoosePage,
     OrderPromptPage,
     OrderDetailPage,
+    OrderListPage,
     ShareCodePage,
     UserSetPage,
     UserPage,
@@ -135,6 +138,7 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     AddressChoosePage,
     OrderPromptPage,
     OrderDetailPage,
+    OrderListPage,
     ShareCodePage,
     UserSetPage,
     UserPage,
@@ -164,6 +168,7 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     AddressChooseService,
     OrderPromptService,
     OrderDetailService,
+    OrderListService,
     UserService,
     UserMessageService
   ]

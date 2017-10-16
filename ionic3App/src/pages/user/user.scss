@@ -1,3 +1,94 @@
 page-user {
+  .content {
+    background: $color-f0;
+  }
+  .user-top {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    > img {
+      display: block;
+      width: 100%;
+    }
+    > .message {
+      position: absolute;
+      top: 7%;
+      right: 7%;
+      width: 7%;
+      &:after {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        width: 8px;
+        height: 8px;
+        background: $color-auxiliary;
+        border-radius: 50%;
+        content: '';
+      }
+    }
+    > .header {
+      position: absolute;
+      width: 15%;
+      top: 30%;
+      left: 5%;
 
+      > img {
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+    > .name {
+      position: absolute;
+      top: 35%;
+      left: 23%;
+      color: $color-f;
+      font-size: 15px;
+      line-height: 130%;
+      > p {
+        color: $color-f;
+        font-size: 12px;
+      }
+    }
+
+  }
+  .panel {
+    position: relative;
+    margin-top: 10px;
+    padding: 0 15px;
+    background: $color-f;
+    .ui-title {
+      padding: 0;
+
+      .right {
+        height: 20px;
+        margin-top: 10px;
+      }
+    }
+    .icon-list {
+      @extend .clear;
+      width: 100%;
+      border-top: solid 1px $color-f0;
+      > li {
+        width: 20%;
+        float: left;
+        > img {
+          display: block;
+          width: 70%;
+          margin: 15px auto;
+        }
+      }
+    }
+    .tel {
+      height: 50px;
+      line-height: 50px;
+      border-top: solid 1px $color-f0;
+      i {
+        color: $color-6;
+      }
+      span{
+        color: $color-default;
+      }
+    }
+  }
 }

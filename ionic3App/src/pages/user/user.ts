@@ -1,6 +1,11 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams , LoadingController} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
 import {UserService} from './user.service';
+import {AddressListPage} from '../address-list/address-list';
+import {UserSetPage} from '../user-set/user-set';
+import {OrderListPage} from '../order-list/order-list';
+import {UserMessagePage} from '../user-message/user-message';
+
 /**
  * Generated class for the UserPage page.
  *
@@ -15,6 +20,7 @@ import {UserService} from './user.service';
 })
 export class UserPage {
 
+  userInfor = {}
   loading: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -26,8 +32,39 @@ export class UserPage {
 
   ionViewDidLoad() {
     this.loading.present();
-    this.loading.dismiss();
+
+    var $this = this;
+    var dataUrl = './assets/data/user.json';
+    var param = ''
+    this.userService
+      .getData(dataUrl, param)
+      .then(function (data) {
+        $this.userInfor = data.items;
+
+        $this.loading.dismiss();
+      });
+
+
     console.log('ionViewDidLoad UserPage');
   }
+
+  //跳转到消息
+  goMes() {
+    this.navCtrl.push(UserMessagePage, {})
+  }
+  //跳转到地址列表页面->
+  goAddress() {
+    this.navCtrl.push(AddressListPage, {})
+  }
+
+  //跳转用户设置->
+  goSet() {
+    this.navCtrl.push(UserSetPage, {})
+  }
+  //  //跳转订单列表
+  goOrderList(){
+    this.navCtrl.push(OrderListPage, {})
+  }
+
 
 }

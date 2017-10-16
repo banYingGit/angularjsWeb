@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
 import {UserMessageService} from './user-message.service';
-
+import {SystemMessagePage} from '../system-message/system-message';
 /**
  * Generated class for the UserMessagePage page.
  *
@@ -29,5 +29,7 @@ export class UserMessagePage {
     this.loading.dismiss();
     console.log('ionViewDidLoad UserMessagePage');
   }
-
+  goSys() {
+    this.navCtrl.push(SystemMessagePage, {})
+  }
 }

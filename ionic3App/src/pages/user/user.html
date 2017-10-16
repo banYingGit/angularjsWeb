@@ -1,9 +1,3 @@
-<!--
-  Generated template for the UserPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -13,6 +7,30 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <div class="user-top"><img src="../../assets/icon/cur/img16.jpg"/>
+    <div class="message" (click)="goMes()"><img src="../../assets/icon/w_icon6.png"/></div>
+    <div class="header"><img [src]="userInfor.proImg"/></div>
+    <div class="name">{{userInfor.name}}
+      <p>{{userInfor.label}}</p>
+    </div>
+  </div>
+  <div class="panel">
+    <ion-title class="ui-title" (click)="goOrderList()">我的订单<img src="../../assets/icon/icon2.png" class="right"/></ion-title>
+    <ul class="icon-list">
+      <li><img src="../../assets/icon/w_icon1.png"/></li>
+      <li><img src="../../assets/icon/w_icon2.png"/></li>
+      <li><img src="../../assets/icon/w_icon3.png"/></li>
+      <li><img src="../../assets/icon/w_icon4.png"/></li>
+      <li><img src="../../assets/icon/w_icon5.png"/></li>
+    </ul>
+  </div>
+  <div class="panel">
+    <ion-title class="ui-title" (click)="goAddress()">地址管理<img src="../../assets/icon/icon2.png" class="right"/></ion-title>
+    <div class="tel">客服热线<i>（9:00-23:00）</i><span class="right">400-047-1888</span></div>
+  </div>
+  <div class="panel">
+    <ion-title class="ui-title" (click)="goSet()">设置<img src="../../assets/icon/icon2.png" class="right"/></ion-title>
+  </div>
 
 </ion-content>
