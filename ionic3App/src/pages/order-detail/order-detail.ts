@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
 import {OrderDetailService} from './order-detail.service';
-
+import {PaymentPage} from '../payment/payment';
 /**
  * Generated class for the OrderDetailPage page.
  *
@@ -16,6 +16,9 @@ import {OrderDetailService} from './order-detail.service';
 })
 export class OrderDetailPage {
 
+  userInfor = {}
+  goods = []
+  orderInfo = {}
   loading: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public orderDetailService: OrderDetailService,
@@ -26,8 +29,21 @@ export class OrderDetailPage {
 
   ionViewDidLoad() {
     this.loading.present();
-    this.loading.dismiss();
-    console.log('ionViewDidLoad OrderDetailPage');
+    var $this = this;
+    var dataUrl = './assets/data/orderDetails.json';
+    var param = ''
+    this.orderDetailService
+      .getData(dataUrl, param)
+      .then(function (data) {
+        $this.userInfor = data.userInfor;
+        $this.goods = data.goods;
+        $this.orderInfo = data.orderInfo;
+        $this.loading.dismiss();
+      });
+  }
+  //付款
+  goPayment(totalAmount) {
+    this.navCtrl.push(PaymentPage, {totalAmount: totalAmount})
   }
 
 }

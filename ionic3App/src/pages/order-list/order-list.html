@@ -37,7 +37,7 @@
           共{{items.sum}}件商品应付款：<span>¥{{items.sumPrice}}</span>
         </div>
         <div class="button-arr" *ngIf="items.orderState==1">
-          <button ion-button>去支付</button>
+          <button ion-button (click)="goPayment()">去支付</button>
           <button ion-button class="grey">取消订单</button>
         </div>
         <div class="button-arr" *ngIf="items.orderState==3">

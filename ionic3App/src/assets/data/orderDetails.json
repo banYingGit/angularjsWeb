@@ -1,0 +1,47 @@
+{
+  "code": "1",
+  "id": "orderID1",
+  "userInfor": {
+    "id": "list1",
+    "name": "谢伯齐kk",
+    "tel": "著名跨界实力派艺术家",
+    "address": "辽宁，大连市，沙河口区",
+    "addressDetail": "海滨广场"
+  },
+  "goods": [
+    {
+      "proImg": "../../assets/icon/cur/img13.jpg",
+      "title": "巅峰玉雕，至尚臻品",
+      "price": "1129",
+      "remarks": "我我是备注信息",
+      "num": "5",
+      "color": "金色"
+    },
+    {
+      "proImg": "../../assets/icon/cur/img15.png",
+      "title": "平安大吉满堂春",
+      "price": "1129",
+      "remarks": "我我是备注信息",
+      "num": "1",
+      "color": "金色"
+    },
+    {
+      "proImg": "../../assets/icon/cur/img16.jpg",
+      "title": "平安大吉满堂春",
+      "price": "1129",
+      "remarks": "我我是备注信息",
+      "num": "3",
+      "color": "金色"
+    }
+  ],
+  "orderInfo": {
+    "num": "123456",
+    "time": "2017-09-24 15：03",
+    "invoiceCom": "XXXX公司",
+    "invoiceCode": "12345679",
+    "payment": "微信支付",
+    "goodsMoney": "35,466",
+    "freight": "0",
+    "sumMoney": "35,466"
+  }
+}

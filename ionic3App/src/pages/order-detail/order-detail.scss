@@ -1,3 +1,138 @@
 page-order-detail {
+  .content {
+    background: $color-f0;
+  }
+  .panel {
+    background: $color-f;
+    margin-bottom: 10px;
+    .floor1 {
+      padding: 10px 15px;
+      > p {
+        line-height: 25px;
+        font-size: 14px;
+      }
+    }
+    .ui-title {
+      border-bottom: solid 1px $color-d;
+    }
+    .goods-list {
+      > li {
+        position: relative;
+        width: 100%;
+        height: 160px;
+        padding: 15px 15px 0 105px;
+        margin: 0 auto;
+        border-bottom: solid 10px $color-f0;
+        &:nth-last-child(1) {
+          border: none;
+        }
+        .pic {
+          position: absolute;
+          width: 80px;
+          height: 80px;
+          top: 15px;
+          left: 15px;
+        }
+        .title {
+          width: 80%;
+          height: 30px;
+          overflow: hidden;
+          margin: 5px 0 0 0;
+          line-height: 30px;
+          font-size: 14px;
+          @extend .ellipsis;
+        }
 
+        .color, .num {
+          font-size: 12px;
+          color: $color-79;
+          line-height: 20px;
+
+        }
+        .price {
+          position: absolute;
+          right: 15px;
+          top: 25px;
+          display: block;
+          font-size: 17px;
+          line-height: 20px;
+        }
+        .remarks {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 40px;
+          padding: 0 15px;
+          border-top: solid 1px $color-d;
+          font-size: 12px;
+          color: $color-79;
+          line-height: 40px;
+          span {
+            padding-right: 15px;
+            color: $color-3;
+          }
+        }
+
+      }
+    }
+    .floor2 {
+      padding: 10px 15px;
+      .infor-row {
+        width: 100%;
+        min-height: 30px;
+        &.line {
+          border-top: solid 1px $color-d;
+          margin-top: 5px;
+          padding-top: 5px;
+        }
+        @extend .clear;
+        > span {
+          display: block;
+          float: left;
+          width: 90px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 14px;
+        }
+        > p.left {
+          float: left;
+          line-height: 30px;
+          font-size: 14px;
+          color: $color-6;
+          &.bold {
+            color: $color-3;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    &:nth-last-child(2) {
+      margin-bottom: 65px;
+    }
+  }
+  .foot-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    padding: 10px 0;
+    background: $color-f;
+    border-top: solid 1px $color-d;
+    .button {
+      display: block;
+      margin: 0 15px 0 0;
+      padding: 0;
+      float: right;
+      width: 85px;
+      height: 35px;
+      background: $color-default;
+      color: $color-f;
+      .button-inner {
+        font-size: 14px;
+      }
+    }
+  }
 }
