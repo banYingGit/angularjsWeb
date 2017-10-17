@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
+import {IonicPage, NavController, NavParams, LoadingController, AlertController} from 'ionic-angular';
 import {UserService} from './user.service';
 import {AddressListPage} from '../address-list/address-list';
 import {UserSetPage} from '../user-set/user-set';
@@ -25,7 +25,8 @@ export class UserPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public loadingCtrl: LoadingController,
-              public userService: UserService,) {
+              public userService: UserService,
+              public alertCtrl: AlertController) {
 
     this.loading = this.loadingCtrl.create();
   }
@@ -52,6 +53,7 @@ export class UserPage {
   goMes() {
     this.navCtrl.push(UserMessagePage, {})
   }
+
   //跳转到地址列表页面->
   goAddress() {
     this.navCtrl.push(AddressListPage, {})
@@ -61,9 +63,38 @@ export class UserPage {
   goSet() {
     this.navCtrl.push(UserSetPage, {})
   }
-  //  //跳转订单列表
-  goOrderList(){
+
+  // 跳转订单列表
+  goOrderList() {
     this.navCtrl.push(OrderListPage, {})
+  }
+
+  // 拨打电话
+  doTel() {
+
+    var $this = this;
+
+    var confirm = this.alertCtrl.create({
+      title: '拨打电话',
+      message: '您确定拨打：400-047-1888',
+      buttons: [
+        {
+          text: '取消',
+          handler: function () {
+          }
+        },
+        {
+          text: '确认',
+          handler: function () {
+
+            var param = {};
+
+            $this.navCtrl.push(AddressListPage, param)
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
 

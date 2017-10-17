@@ -64,7 +64,7 @@ import {OrderPromptService} from '../pages/order-prompt/order-prompt.service';
 import {OrderListService} from '../pages/order-list/order-list.service';
 import {UserService} from '../pages/user/user.service';
 import {UserMessageService} from '../pages/user-message/user-message.service';
-
+import {SystemMessageService} from '../pages/system-message/system-message.service';
 
 /*组件*/
 import {NumberBoxComponent} from '../components/number-box/number-box';
@@ -170,7 +170,8 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     OrderDetailService,
     OrderListService,
     UserService,
-    UserMessageService
+    UserMessageService,
+    SystemMessageService
   ]
 })
 export class AppModule {

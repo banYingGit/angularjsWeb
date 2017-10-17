@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { SystemMessagePage } from './system-message';
+import {NgModule} from '@angular/core';
+import {IonicPageModule} from 'ionic-angular';
+import {SystemMessagePage} from './system-message';
 
 @NgModule({
   declarations: [
@@ -10,4 +10,6 @@ import { SystemMessagePage } from './system-message';
     IonicPageModule.forChild(SystemMessagePage),
   ],
 })
-export class SystemMessagePageModule {}
+export class SystemMessagePageModule {
+  items: Array<object>
+}

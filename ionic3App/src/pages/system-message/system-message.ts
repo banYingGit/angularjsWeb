@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
-
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
+import {SystemMessageService} from './system-message.service';
 /**
  * Generated class for the SystemMessagePage page.
  *
@@ -15,17 +15,30 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 })
 export class SystemMessagePage {
 
+  listData = []
   loading: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
+              public systemMessageService: SystemMessageService,
               public loadingCtrl: LoadingController) {
 
     this.loading = this.loadingCtrl.create();
   }
+
   ionViewDidLoad() {
     this.loading.present();
-    this.loading.dismiss();
-    console.log('ionViewDidLoad SystemMessagePage');
+
+
+    var $this = this;
+
+    var dataUrl = './assets/data/SystemMessage.json';
+    this.systemMessageService
+      .getData(dataUrl, '')
+      .then(function (data) {
+
+        $this.listData = data.items;
+        $this.loading.dismiss();
+      });
   }
 
 }

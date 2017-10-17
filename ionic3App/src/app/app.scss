@@ -19,9 +19,10 @@ $color-3: #333;
 $color-6: #666;
 $color-79: #797979;
 $color-9: #999;
+$color-c: #ccc;
+$color-d: #dcdedd;
 $color-f9: #f9f9f9;
 $color-f0: #f0f0f0;
-$color-c: #ccc;
 $color-f: #fff;
 
 $mask-b-6: rgba(0, 0, 0, 0.6);
@@ -180,6 +181,9 @@ h1, h2, h3, h4, h5, p, ul, li, i {
   border-radius: 5px !important;
   .alert-head {
     padding: 15px;
+  }
+  .alert-title {
+    color: $color-3;
   }
   .alert-message {
     line-height: 30px;

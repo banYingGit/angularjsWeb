@@ -1,3 +1,60 @@
 page-system-message {
+  .content {
+    background: $color-f0;
+  }
+  .list {
+    > li {
+      height: 215px;
+      padding-top: 20px;
+      > .time {
+        width: 50px;
+        height: 20px;
+        background: $color-d;
+        margin: 0 auto 20px auto;
+        border-radius: 3px;
+        text-align: center;
+        line-height: 20px;
+        color: $color-f;
+        font-size: 12px;
+      }
+      > .panel {
+        width: 90%;
+        height: 155px;
+        background: $color-f;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 5px;
+        .title {
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          font-size: 14px;
+          @extend .ellipsis;
+        }
+        .detail {
+          width: 100%;
+          height: 30px;
+          line-height: 30px;
 
+          font-size: 12px;
+          color: $color-6;
+          @extend .ellipsis;
+
+        }
+        .panel-bot {
+          width: 100%;
+          height: 40px;
+          margin-top: 15px;
+          border-top: solid 1px $color-f0;
+          line-height: 40px;
+          color: $color-default;
+          font-size: 14px;
+          > img.right {
+            height: 20px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
 }
