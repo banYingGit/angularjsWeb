@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams , LoadingController} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
 import {OrderPromptService} from './order-prompt.service';
+import {OrderDetailPage} from '../order-detail/order-detail';
 /**
  * Generated class for the OrderPromptPage page.
  *
@@ -22,10 +23,14 @@ export class OrderPromptPage {
 
     this.loading = this.loadingCtrl.create();
   }
+
   ionViewDidLoad() {
     this.loading.present();
     this.loading.dismiss();
     console.log('ionViewDidLoad OrderPromptPage');
   }
 
+  goOrderDetail() {
+    this.navCtrl.push(OrderDetailPage);
+  }
 }
