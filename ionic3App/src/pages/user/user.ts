@@ -5,7 +5,7 @@ import {AddressListPage} from '../address-list/address-list';
 import {UserSetPage} from '../user-set/user-set';
 import {OrderListPage} from '../order-list/order-list';
 import {UserMessagePage} from '../user-message/user-message';
-
+import {LoginPage} from '../login/login';
 /**
  * Generated class for the UserPage page.
  *
@@ -20,6 +20,7 @@ import {UserMessagePage} from '../user-message/user-message';
 })
 export class UserPage {
 
+  userState: any
   userInfor = {}
   loading: any;
 
@@ -28,7 +29,12 @@ export class UserPage {
               public userService: UserService,
               public alertCtrl: AlertController) {
 
+    this.userState = '0' //1 为登录  0是未登录
     this.loading = this.loadingCtrl.create();
+
+    if (this.userState = '0') {
+      this.navCtrl.push(LoginPage)
+    }
   }
 
   ionViewDidLoad() {
@@ -36,7 +42,7 @@ export class UserPage {
 
     var $this = this;
     var dataUrl = './assets/data/user.json';
-    var param = ''
+    var param = '';
     this.userService
       .getData(dataUrl, param)
       .then(function (data) {

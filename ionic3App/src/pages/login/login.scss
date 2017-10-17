@@ -1,0 +1,71 @@
+page-login {
+  .close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 7%;
+  }
+  .logo {
+    padding: 15% 0;
+    > img {
+      display: block;
+      width: 20%;
+      margin: 0 auto;
+    }
+  }
+  .list, .item, .item-inner, .label {
+    padding: 0;
+    margin: 0;
+    border: 0 !important;
+  }
+  .list {
+    padding: 0 20px;
+    .text-input {
+      width: 100%;
+      height: 40px;
+      margin: 0;
+      padding: 0 15px;
+      border-radius: 4px;
+      background: $color-f0;
+      font-size: 14px;
+
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      height: 40px;
+      padding: 0;
+      margin: 15px 0 0 0;
+      background: $color-default;
+      color: $color-f;
+      font-size: 15px;
+      &.outline {
+        background: $color-f;
+        border: solid 1px $color-d;
+        img {
+
+          height: 55%;
+
+        }
+      }
+    }
+
+  }
+  .foot-btn {
+    width: 80%;
+    height: 30px;
+    margin: 40px auto 0 auto;
+    > p {
+      width: 50%;
+      height: 30px;
+      float: left;
+      line-height: 30px;
+      text-align: center;
+      &:nth-last-child(1) {
+        color: $color-default;
+      }
+    }
+  }
+
+}

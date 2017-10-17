@@ -43,6 +43,10 @@ import {SystemMessagePage} from '../pages/system-message/system-message';
 import {CommissionPage} from '../pages/commission/commission';
 import {ParityPage} from '../pages/parity/parity';
 
+import {LoginPage} from '../pages/login/login';
+import {RegisterPage} from '../pages/register/register';
+import {LetterOutPage} from '../pages/letter-out/letter-out';
+import {LetterIntoPage} from '../pages/letter-into/letter-into';
 
 /*service*/
 import {IndexService} from '../pages/index/index.service';
@@ -104,6 +108,10 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     CommissionPage,
     ParityPage,
     UserMessagePage,
+    LoginPage,
+    RegisterPage,
+    LetterOutPage,
+    LetterIntoPage,
     NumberBoxComponent,
 
   ],
@@ -146,7 +154,11 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     SystemMessagePage,
     CommissionPage,
     ParityPage,
-    UserMessagePage
+    UserMessagePage,
+    LoginPage,
+    RegisterPage,
+    LetterOutPage,
+    LetterIntoPage
   ],
   providers: [
     StatusBar,
