@@ -1,9 +1,3 @@
-<!--
-  Generated template for the LetterOutPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -13,6 +7,53 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <img src="../../assets/icon/m_icon5.png" class="top-pic"/>
+  <img src="../../assets/icon/m_icon4.png" class="title-icon m-t-15"/>
+  <div class="check-box">
+    <ion-list check-group>
+      <ion-item>
+        <ion-label>招财</ion-label>
+        <ion-checkbox [(ngModel)]="chooseVal1" checked></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>进宝</ion-label>
+        <ion-checkbox [(ngModel)]="chooseVal2"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>添丁</ion-label>
+        <ion-checkbox [(ngModel)]="chooseVal3"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>平安</ion-label>
+        <ion-checkbox [(ngModel)]="chooseVal4"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>纳福</ion-label>
+        <ion-checkbox [(ngModel)]="chooseVal5"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>旺财</ion-label>
+        <ion-checkbox [(ngModel)]="chooseVal6"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>顺科</ion-label>
+        <ion-checkbox [(ngModel)]="chooseVal7"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>登科</ion-label>
+        <ion-checkbox [(ngModel)]="chooseVal8"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>辟邪</ion-label>
+        <ion-checkbox [(ngModel)]="chooseVal9"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>驱煞</ion-label>
+        <ion-checkbox [(ngModel)]="chooseVal10"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div class="text">发生的发放</div>
+  <div class="ui-button">分享好友</div>
 </ion-content>

@@ -1,3 +1,57 @@
 page-user-set {
+  .content {
+    background: $color-f0;
+  }
+  .panel {
+    width: 100%;
+    height: 185px;
+    background: $color-f;
+    .item {
+      position: relative;
+      margin: 0;
+      padding: 0 15px;
+      border-bottom: solid 1px $color-d;
+      height: 45px;
+      line-height: 45px;
+      font-size: 14px;
+      color: $color-6;
+      .icon {
+        display: block;
+        float: right;
+        height: 20px;
+        margin-top: 12px;
 
+      }
+      .pic {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        top: 13px;
+        right: 50px;
+      }
+      .item-inner, .input-wrapper {
+        margin: 0;
+        padding: 0;
+        border: none;
+
+      }
+      span.right {
+        position: absolute;
+        height: 40px;
+        top: 5px;
+        right: 50px;
+        font-size: 12px;
+      }
+      &:nth-child(1) {
+        height: 95px;
+        line-height: 95px;
+        .icon {
+          margin-top: 35px;
+        }
+      }
+      &:nth-last-child(1) {
+        border: none;
+      }
+    }
+  }
 }

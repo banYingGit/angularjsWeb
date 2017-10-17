@@ -44,7 +44,7 @@
           <button ion-button>确认收货</button>
         </div>
         <div class="button-arr" *ngIf="items.orderState==4">
-          <button ion-button>评价</button>
+          <button ion-button (click)="goEvaluate()">评价</button>
         </div>
       </div>
     </div>

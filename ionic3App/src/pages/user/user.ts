@@ -6,6 +6,10 @@ import {UserSetPage} from '../user-set/user-set';
 import {OrderListPage} from '../order-list/order-list';
 import {UserMessagePage} from '../user-message/user-message';
 import {LoginPage} from '../login/login';
+import {ShareCodePage} from '../share-code/share-code';
+import {LetterIntoPage} from '../letter-into/letter-into';
+import {LetterOutPage} from '../letter-out/letter-out';
+
 /**
  * Generated class for the UserPage page.
  *
@@ -74,6 +78,18 @@ export class UserPage {
   goOrderList() {
     this.navCtrl.push(OrderListPage, {})
   }
+
+  // 測試 分享
+  goShare() {
+    this.navCtrl.push(ShareCodePage, {})
+  }
+  goLetterInto(){
+    this.navCtrl.push(LetterIntoPage, {})
+  }
+  goLetterOut(){
+    this.navCtrl.push(LetterOutPage, {})
+  }
+
 
   // 拨打电话
   doTel() {

@@ -47,6 +47,8 @@ import {LoginPage} from '../pages/login/login';
 import {RegisterPage} from '../pages/register/register';
 import {LetterOutPage} from '../pages/letter-out/letter-out';
 import {LetterIntoPage} from '../pages/letter-into/letter-into';
+import {EvaluatePage} from '../pages/evaluate/evaluate';
+
 
 /*service*/
 import {IndexService} from '../pages/index/index.service';
@@ -112,6 +114,7 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     RegisterPage,
     LetterOutPage,
     LetterIntoPage,
+    EvaluatePage,
     NumberBoxComponent,
 
   ],
@@ -158,7 +161,8 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     LoginPage,
     RegisterPage,
     LetterOutPage,
-    LetterIntoPage
+    LetterIntoPage,
+    EvaluatePage
   ],
   providers: [
     StatusBar,

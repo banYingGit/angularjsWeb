@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
+import {IonicPage, NavController, NavParams, LoadingController, ToastController} from 'ionic-angular';
 import {UserPage} from '../user/user';
 import {RegisterPage} from '../register/register';
 import {IndexPage} from '../index/index';
@@ -24,7 +24,7 @@ export class LoginPage {
   loading: any;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public toastCtrl: ToastController) {
 
     this.loading = this.loadingCtrl.create();
   }
@@ -42,6 +42,11 @@ export class LoginPage {
       this.navCtrl.push(UserPage);
     } else {
 
+      let toast = this.toastCtrl.create({
+        message: '输入错误',
+        duration: 3000
+      });
+      toast.present();
     }
   }
 

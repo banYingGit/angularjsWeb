@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
 import {OrderPromptService} from './order-prompt.service';
 import {OrderDetailPage} from '../order-detail/order-detail';
+import {EvaluatePage} from '../evaluate/evaluate';
 /**
  * Generated class for the OrderPromptPage page.
  *
@@ -32,5 +33,9 @@ export class OrderPromptPage {
 
   goOrderDetail() {
     this.navCtrl.push(OrderDetailPage);
+  }
+
+  goEvaluate() {
+    this.navCtrl.push(EvaluatePage)
   }
 }

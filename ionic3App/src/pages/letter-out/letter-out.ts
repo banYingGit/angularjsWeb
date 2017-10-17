@@ -15,6 +15,16 @@ import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angu
 })
 export class LetterOutPage {
 
+  chooseVal1=''
+  chooseVal2=''
+  chooseVal3=''
+  chooseVal4=''
+  chooseVal5=''
+  chooseVal6=''
+  chooseVal7=''
+  chooseVal8=''
+  chooseVal9=''
+  chooseVal10=''
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
 

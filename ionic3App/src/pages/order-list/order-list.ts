@@ -3,6 +3,7 @@ import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angu
 import {OrderListService} from './order-list.service';
 import {OrderDetailPage} from '../order-detail/order-detail';
 import {PaymentPage} from '../payment/payment';
+import {EvaluatePage} from '../evaluate/evaluate';
 /**
  * Generated class for the OrderListPage page.
  *
@@ -69,6 +70,10 @@ export class OrderListPage {
   //付款
   goPayment(totalAmount) {
     this.navCtrl.push(PaymentPage, {totalAmount: totalAmount})
+  }
+
+  goEvaluate() {
+    this.navCtrl.push(EvaluatePage)
   }
 
 }
