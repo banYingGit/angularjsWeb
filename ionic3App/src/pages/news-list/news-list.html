@@ -1,11 +1,6 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>newsList</ion-title>
-  </ion-navbar>
-
+  <ui-header [(ngModel)]='headerData'></ui-header>
 </ion-header>
-
 <ion-content>
   <ul class="news-list" *ngIf="listData.length>0">
     <li *ngFor="let items of  listData"><img [src]="items.proImg" class="img"/>

@@ -74,6 +74,7 @@ import {SystemMessageService} from '../pages/system-message/system-message.servi
 
 /*组件*/
 import {NumberBoxComponent} from '../components/number-box/number-box';
+import {UiHeaderComponent} from '../components/ui-header/ui-header';
 
 @NgModule({
   declarations: [
@@ -116,7 +117,7 @@ import {NumberBoxComponent} from '../components/number-box/number-box';
     LetterIntoPage,
     EvaluatePage,
     NumberBoxComponent,
-
+    UiHeaderComponent
   ],
   imports: [
     BrowserModule,

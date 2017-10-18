@@ -12,6 +12,11 @@ export class NewsListPage {
   listData = []
   loading: any;
   pageNum = 1;
+  headerData = {
+    "title": '唐朝头条',
+    "isGoBack": true
+  };
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public newsListService: NewsListService,

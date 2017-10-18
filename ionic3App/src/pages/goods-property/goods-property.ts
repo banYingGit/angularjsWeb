@@ -17,6 +17,10 @@ export class GoodsPropertyPage {
   goodsId = ''
   loading: any;
   listData = [];
+  headerData = {
+    title: '知识产权声明',
+    "isGoBack": true
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public goodsPropertyService: GoodsPropertyService, public loadingCtrl: LoadingController) {
 

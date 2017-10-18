@@ -25,6 +25,14 @@ export class MakePage {
   MDYDate = ''
   HDate = ''
   mDate = ''
+  headerData = {
+    "title": '高端定制',
+    "isShowRight": true,
+    "btnText": "神秘信",
+    "btnFn": function () {
+      console.log('OO～神秘信不知道这个干什么呢！！')
+    }
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
     this.loading = this.loadingCtrl.create();
@@ -44,4 +52,6 @@ export class MakePage {
   goResult() {
     this.navCtrl.push(MakeResultPage)
   }
+
+
 }

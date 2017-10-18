@@ -11,6 +11,10 @@ export class PaymentPage {
   loading: any;
   totalAmount = '';
   payWay = ''
+  headerData = {
+    title: '收银台',
+    "isGoBack": true
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
     this.loading = this.loadingCtrl.create();

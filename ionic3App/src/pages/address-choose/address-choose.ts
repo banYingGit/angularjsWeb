@@ -27,6 +27,10 @@ export class AddressChoosePage {
   address = '';
   addressDetail = ''
   default = '';
+  headerData = {
+    title: '地址地区',
+    "isGoBack": true
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public addressChooseService: AddressChooseService) {
 

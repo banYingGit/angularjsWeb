@@ -21,6 +21,10 @@ export class OrderListPage {
   listData = []
   isTabActive = '1'
   loading: any;
+  headerData = {
+    title: '我的订单',
+    "isGoBack": true
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController,
               public orderListService: OrderListService,) {
@@ -64,9 +68,11 @@ export class OrderListPage {
       $this.isTabActive = stata
     })
   }
+
   goOrderDetail() {
     this.navCtrl.push(OrderDetailPage);
   }
+
   //付款
   goPayment(totalAmount) {
     this.navCtrl.push(PaymentPage, {totalAmount: totalAmount})

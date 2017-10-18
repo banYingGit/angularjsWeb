@@ -17,6 +17,10 @@ export class MakeResultPage {
   loading: any;
   initData = {}
   listData = []
+  headerData = {
+    title: '推荐艺术品',
+    "isGoBack": true
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public makeResultService: MakeResultService, public loadingCtrl: LoadingController) {
     this.loading = this.loadingCtrl.create();

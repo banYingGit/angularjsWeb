@@ -39,7 +39,10 @@ export class LoginPage {
   doLogin() {
 
     if (this.tel != '' && this.password != '') {
+
+
       this.navCtrl.push(UserPage);
+
     } else {
 
       let toast = this.toastCtrl.create({

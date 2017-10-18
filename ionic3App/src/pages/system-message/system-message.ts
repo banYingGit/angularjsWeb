@@ -17,7 +17,10 @@ export class SystemMessagePage {
 
   listData = []
   loading: any;
-
+  headerData = {
+    title: '系统消息',
+    "isGoBack": true
+  };
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public systemMessageService: SystemMessageService,
               public loadingCtrl: LoadingController) {

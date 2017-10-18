@@ -25,7 +25,17 @@ export class AddressPage {
   address = '';
   addressDetail = '';
   default = '';
+  headerData = {
+    "title": '',
+    "isGoBack": false,
+    "goBackFn": function () {
+    },
+    "isShowRight": true,
+    "btnText": "保存",
+    "btnFn": function () {
 
+    }
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
 
@@ -39,6 +49,16 @@ export class AddressPage {
     this.addressDetail = navParams.get('addressDetail');
     this.default = navParams.get('default');
     this.loading = this.loadingCtrl.create();
+    if(this.addressState=='1'){
+
+      this.headerData.title='新建地址'
+
+    }else if(this.addressState=='0'){
+
+      this.headerData.title='编辑地址'
+
+    }
+
 
   }
 
@@ -46,14 +66,41 @@ export class AddressPage {
 
     this.loading.present();
     this.loading.dismiss();
+    var $this = this;
+
+    //返回上一页
+    this.headerData.goBackFn = function () {
+
+      console.log('>>>>>>>>>>>>>>>>>>>>>>>>>MMM')
+      var confirm = $this.alertCtrl.create({
+        title: '',
+        message: '是否取消编辑？',
+        buttons: [
+          {
+            text: '取消',
+            handler: function () {
+            }
+          },
+          {
+            text: '确认',
+            handler: function () {
+
+              var param = {};
+
+              $this.navCtrl.push(AddressListPage, param)
+            }
+          }
+        ]
+      });
+      confirm.present();
+
+    }
+    //保存按钮
+    this.headerData.btnFn = function () {
+      $this.navCtrl.push(AddressListPage, {})
+    }
   }
 
-  //保存
-  doSave() {
-    var param = {}
-    this.navCtrl.push(AddressListPage, param)
-
-  }
 
   //选择地址
   goChooseAdress() {
@@ -72,33 +119,4 @@ export class AddressPage {
 
   }
 
-//返回上一页
-  goBack() {
-
-    var $this = this;
-
-    var confirm = this.alertCtrl.create({
-      title: '',
-      message: '是否取消编辑？',
-      buttons: [
-        {
-          text: '取消',
-          handler: function () {
-          }
-        },
-        {
-          text: '确认',
-          handler: function () {
-
-            var param = {};
-
-            $this.navCtrl.push(AddressListPage, param)
-          }
-        }
-      ]
-    });
-    confirm.present();
-
-
-  }
 }

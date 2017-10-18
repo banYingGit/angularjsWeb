@@ -16,7 +16,10 @@ import { IonicPage, NavController, NavParams , LoadingController} from 'ionic-an
 export class UserSetPage {
 
   loading: any;
-
+  headerData = {
+    title: '个人设置',
+    "isGoBack": true
+  };
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public loadingCtrl: LoadingController) {
 

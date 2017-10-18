@@ -1,12 +1,6 @@
 <ion-header>
-  <ion-title>
-    <div style="height: 40px;"><span class="left" (click)="goBack()">goBack</span> address <span class="right"
-                                                                                                 (click)="doSave()">保存</span>
-    </div>
-  </ion-title>
+  <ui-header [(ngModel)]='headerData'></ui-header>
 </ion-header>
-
-
 <ion-content>
   <ion-list>
     <ion-item>

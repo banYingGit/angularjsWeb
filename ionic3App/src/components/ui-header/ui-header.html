@@ -1,0 +1,5 @@
+<div class="ui-header">
+  <img src="../../assets/icon/icon5.png" class="left-icon" (click)="goBack()"/>
+  <h1>{{headerData.title}}</h1>
+  <div class="right-btn" *ngIf="headerData.isShowRight" (click)="doHeaderBtn()">{{headerData.btnText}}</div>
+</div>

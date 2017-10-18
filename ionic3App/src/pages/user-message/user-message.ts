@@ -17,7 +17,10 @@ import {SystemMessagePage} from '../system-message/system-message';
 export class UserMessagePage {
 
   loading: any;
-
+  headerData = {
+    title: '我的消息',
+    "isGoBack": true
+  };
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public loadingCtrl: LoadingController, public userMessageService: UserMessageService) {
 

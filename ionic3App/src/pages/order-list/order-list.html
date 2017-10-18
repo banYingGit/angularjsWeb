@@ -1,11 +1,6 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>order-list</ion-title>
-  </ion-navbar>
-
+  <ui-header [(ngModel)]='headerData'></ui-header>
 </ion-header>
-
 <ion-content>
   <div class="tab-bar">
     <p (click)="changeData('1')" [ngClass]="{'active':isTabActive == '1'}">全部</p>

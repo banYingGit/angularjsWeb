@@ -1,7 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import {IonicPage, NavController, NavParams, LoadingController, Slides} from 'ionic-angular';
 import {ArticleDetailsPage} from '../article-details/article-details';
-import 'rxjs/Rx';
 import {ChannelListService} from './channel-list.service';
 
 @IonicPage()
@@ -19,6 +18,7 @@ export class ChannelListPage {
   isTabActive = ''
   pageNum = 1;
   isShowSlide = false;
+
 
   // channelList: ChannelListPageModule = new ChannelListPageModule();
 
@@ -97,6 +97,10 @@ export class ChannelListPage {
 
   goDetail(id) {
     this.navCtrl.push(ArticleDetailsPage, {"id": id});
+  }
+
+  goBack(){
+    this.navCtrl && this.navCtrl.pop(null, null);
   }
 }
 

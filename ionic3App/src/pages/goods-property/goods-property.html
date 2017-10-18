@@ -1,12 +1,6 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>goodsProperty</ion-title>
-  </ion-navbar>
-
+  <ui-header [(ngModel)]='headerData'></ui-header>
 </ion-header>
-
-
 <ion-content>
   <div class="listData" *ngIf="listData.length>0">
     <img *ngFor="let items of  listData" [src]="items"/>

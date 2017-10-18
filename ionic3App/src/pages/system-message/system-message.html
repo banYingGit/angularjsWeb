@@ -1,12 +1,6 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>system-message</ion-title>
-  </ion-navbar>
-
+  <ui-header [(ngModel)]='headerData'></ui-header>
 </ion-header>
-
-
 <ion-content>
   <ul class="list" *ngIf="listData.length>0">
     <li *ngFor="let items of  listData">

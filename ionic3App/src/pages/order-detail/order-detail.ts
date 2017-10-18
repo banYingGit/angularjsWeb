@@ -20,6 +20,10 @@ export class OrderDetailPage {
   goods = []
   orderInfo = {}
   loading: any;
+  headerData = {
+    title: '订单详情',
+    "isGoBack": true
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public orderDetailService: OrderDetailService,
               public loadingCtrl: LoadingController) {
@@ -41,6 +45,7 @@ export class OrderDetailPage {
         $this.loading.dismiss();
       });
   }
+
   //付款
   goPayment(totalAmount) {
     this.navCtrl.push(PaymentPage, {totalAmount: totalAmount})

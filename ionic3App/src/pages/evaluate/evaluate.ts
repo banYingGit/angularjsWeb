@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 
 /**
  * Generated class for the EvaluatePage page.
@@ -14,6 +14,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'evaluate.html',
 })
 export class EvaluatePage {
+
+  headerData = {
+    title: '评价',
+    "isGoBack": true
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

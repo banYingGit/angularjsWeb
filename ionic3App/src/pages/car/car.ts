@@ -23,6 +23,14 @@ export class CarPage {
   isAll = false
   numVal = '';
   totalAmount = '3880'
+  headerData = {
+    "title": '编辑地址',
+    "isGoBack": true,
+    "isShowRight": true,
+    "btnText": "编辑",
+    "btnFn": function () {
+    }
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public carService: CarService) {
 
@@ -43,6 +51,31 @@ export class CarPage {
         $this.listData = data.itemsObj;
         $this.loading.dismiss();
       });
+
+    //编辑按钮
+    this.headerData.btnFn = function () {
+
+      if ($this.isEdit) {
+
+        $this.isEdit = false
+
+        $this.headerData.btnText = '编辑'
+
+      } else {
+
+        $this.isEdit = true;
+
+        $this.headerData.btnText = '保存'
+
+        for (var i = 0; i < $this.listData.length; i++) {
+
+          $this.numVal = $this.listData[i].num;
+
+          console.log('this.numVal', $this.numVal)
+
+        }
+      }
+    }
 
   }
 
@@ -88,19 +121,6 @@ export class CarPage {
 
   doEdit() {
 
-    if (this.isEdit) {
-      this.isEdit = false
-
-    } else {
-      this.isEdit = true
-      for (var i = 0; i < this.listData.length; i++) {
-
-        this.numVal = this.listData[i].num
-
-        console.log('this.numVal', this.numVal)
-
-      }
-    }
   }
 
   goOrder() {

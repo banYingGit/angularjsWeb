@@ -1,0 +1,32 @@
+ui-header {
+  .ui-header {
+    position: relative;
+    height: 45px;
+    background: $color-f;
+    box-shadow: 0 0 5px 2px $color-d;
+    > h1 {
+      width: 75%;
+      height: 100%;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 45px;
+      font-size: 18px;
+      @extend .ellipsis;
+    }
+    > .left-icon {
+      position: absolute;
+      height: 25px;
+      top: 10px;
+      left: 15px;
+    }
+    > .right-btn {
+      position: absolute;
+      height: 25px;
+      top: 10px;
+      right: 15px;
+      line-height: 25px;
+      color: $color-default;
+      font-size: 14px;
+    }
+  }
+}

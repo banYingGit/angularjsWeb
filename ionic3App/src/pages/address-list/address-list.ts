@@ -3,6 +3,7 @@ import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angu
 import {AddressListService} from './address-list.service';
 import {OrderSurePage} from '../order-sure/order-sure';
 import {AddressPage} from '../address/address';
+import {UserPage} from '../user/user';
 /**
  * Generated class for the AddressListPage page.
  *
@@ -19,6 +20,12 @@ export class AddressListPage {
 
   loading: any;
   listdata = []
+  headerData = {
+    title: '地址管理',
+    "isGoBack": false,
+    "goBackFn": function () {
+    },
+  };
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public addressListService: AddressListService) {
@@ -42,6 +49,10 @@ export class AddressListPage {
         $this.loading.dismiss();
       });
 
+    //返回个人中心
+    this.headerData.goBackFn = function () {
+      $this.navCtrl.push(UserPage)
+    }
   }
 
   choose(items) {

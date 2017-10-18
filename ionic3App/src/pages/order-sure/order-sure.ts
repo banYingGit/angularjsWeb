@@ -41,6 +41,10 @@ export class OrderSurePage {
 
   };
   totalAmount = '2888';
+  headerData = {
+    "title": '确认订单',
+    "isGoBack": true
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
 

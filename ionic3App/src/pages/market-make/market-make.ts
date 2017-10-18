@@ -19,6 +19,10 @@ export class MarketMakePage {
   loading: any;
   topValue = ''
   bottomValue = ''
+  headerData = {
+    title: '普通定制',
+    "isGoBack": true
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public marketMakeService: MarketMakeService, public loadingCtrl: LoadingController) {
 

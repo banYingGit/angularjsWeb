@@ -5,7 +5,7 @@ page-goods-evaluate {
   .panel {
     margin-top: 10px;
     min-height: calc(100% - 11px);
-    border-top: solid 1px $color-c;
+    border-top: solid 1px $color-d;
     background: $color-f;
     > .list {
       width: 100%;
@@ -14,7 +14,7 @@ page-goods-evaluate {
       > li {
         width: 100%;
         @extend .clear;
-        border-bottom: solid 1px $color-f0;
+        border-bottom: solid 1px $color-d;
         .header {
           display: block;
           float: left;

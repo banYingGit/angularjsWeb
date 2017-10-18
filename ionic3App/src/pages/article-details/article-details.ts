@@ -46,4 +46,8 @@ export class ArticleDetailsPage {
     this.navCtrl.push(ArticleDetailsPage, {"id": id});
   }
 
+  goBack(){
+    this.navCtrl && this.navCtrl.pop(null, null);
+  }
+
 }

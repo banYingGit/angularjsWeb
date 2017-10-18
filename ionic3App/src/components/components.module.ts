@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { NumberBoxComponent } from './number-box/number-box';
+import { UiHeaderComponent } from './ui-header/ui-header';
 @NgModule({
-	declarations: [NumberBoxComponent],
+	declarations: [NumberBoxComponent,
+    UiHeaderComponent],
 	imports: [],
-	exports: [NumberBoxComponent]
+	exports: [NumberBoxComponent,
+    UiHeaderComponent]
 })
 export class ComponentsModule {}

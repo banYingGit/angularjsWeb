@@ -18,7 +18,10 @@ export class GoodsEvaluatePage {
   loading: any;
   listData = []
   pageNum = 1;
-
+  headerData = {
+    title: '全部评价',
+    "isGoBack": true
+  };
   constructor(public navCtrl: NavController, public navParams: NavParams, public goodsEvaluateService: GoodsEvaluateService, public loadingCtrl: LoadingController) {
 
     this.loading = this.loadingCtrl.create();
