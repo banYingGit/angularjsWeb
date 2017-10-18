@@ -47,7 +47,8 @@ export class LoginPage {
 
       let toast = this.toastCtrl.create({
         message: '输入错误',
-        duration: 3000
+        duration: 3000,
+        position: 'middle'
       });
       toast.present();
     }

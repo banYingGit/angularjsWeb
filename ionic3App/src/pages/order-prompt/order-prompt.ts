@@ -38,4 +38,9 @@ export class OrderPromptPage {
   goEvaluate() {
     this.navCtrl.push(EvaluatePage)
   }
+
+  goBack(){
+    this.navCtrl && this.navCtrl.pop(null, null);
+  }
+
 }

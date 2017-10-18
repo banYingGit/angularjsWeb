@@ -1,12 +1,9 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>goodsDetails</ion-title>
-  </ion-navbar>
-
 </ion-header>
 
 <ion-content>
+  <div class="top-opeartion"><img src="../../assets/icon/icon6.png" class="left" (click)="goBack()"/><img
+    src="../../assets/icon/icon7.png" class="right" (click)="goBack()"/></div>
   <div class="panel">
     <div class="floor1">
       <ion-slides autoplay="2000" loop *ngIf="slideList.length>0" pager>
@@ -94,7 +91,7 @@
       <p><img src="../../assets/icon/s_icon6.png"/></p></div>
     <div class="button-right">
       <button ion-button (click)="addCar()">加入购物车</button>
-      <button ion-button >立即购买</button>
+      <button ion-button>立即购买</button>
     </div>
   </div>
 </ion-content>

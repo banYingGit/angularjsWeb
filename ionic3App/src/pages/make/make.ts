@@ -27,6 +27,7 @@ export class MakePage {
   mDate = ''
   headerData = {
     "title": '高端定制',
+    "isGoBack": true,
     "isShowRight": true,
     "btnText": "神秘信",
     "btnFn": function () {

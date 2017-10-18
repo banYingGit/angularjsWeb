@@ -2,6 +2,18 @@ page-goods-details {
   .content {
     background: $color-f0;
   }
+  .top-opeartion {
+    position: absolute;
+    top: 15px;
+    left: 5%;
+    width: 90%;
+    height: 22px;
+    z-index: 10;
+    > img {
+      display: block;
+      height: 100%;
+    }
+  }
   .panel {
     border-top: solid 1px $color-c;
     border-bottom: solid 1px $color-c;

@@ -29,4 +29,9 @@ export class ShareCodePage {
     console.log('ionViewDidLoad ShareCodePage');
   }
 
+  goBack(){
+    this.navCtrl && this.navCtrl.pop(null, null);
+  }
+
+
 }

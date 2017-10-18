@@ -1,4 +1,23 @@
 page-share-code {
+  .left-icon {
+    position: absolute;
+    height: 25px;
+    top: 15px;
+    left: 15px;
+    z-index: 10;
+  }
+  .top-title {
+    position: absolute;
+    width: 60%;
+    height: 25px;
+    top: 15px;
+    left: 20%;
+    z-index: 10;
+    line-height: 25px;
+    font-size: 16px;
+    color: $color-f;
+    text-align: center;
+  }
   .user-top {
     position: relative;
     width: 100%;

@@ -79,4 +79,9 @@ export class GoodsDetailsPage {
     });
     toast.present();
   }
+
+  goBack(){
+    this.navCtrl && this.navCtrl.pop(null, null);
+  }
+
 }

@@ -46,4 +46,8 @@ export class MasterDetailsPage {
 
   }
 
+  goBack(){
+    this.navCtrl && this.navCtrl.pop(null, null);
+  }
+
 }
