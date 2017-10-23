@@ -4,8 +4,10 @@
 <ion-content>
   <ul class="news-list" *ngIf="listData.length>0">
     <li *ngFor="let items of  listData"><img [src]="items.proImg" class="img"/>
-      <h2 class="title">{{items.title}}</h2>
-      <p class="detail">{{items.detail}}</p>
+      <div class="text-box">
+        <h2 class="title">{{items.title}}</h2>
+        <p class="detail">{{items.detail}}</p>
+      </div>
     </li>
   </ul>
   <ion-infinite-scroll (ionInfinite)="doRefresh($event)">

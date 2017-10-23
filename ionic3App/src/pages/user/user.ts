@@ -33,10 +33,10 @@ export class UserPage {
               public userService: UserService,
               public alertCtrl: AlertController) {
 
-    this.userState = '0' //1 为登录  0是未登录
+    this.userState = '1' //1 为登录  0是未登录
     this.loading = this.loadingCtrl.create();
-
-    if (this.userState = '0') {
+    console.log('this.userState', this.userState)
+    if (this.userState == '0') {
       this.navCtrl.push(LoginPage)
     }
   }
@@ -83,10 +83,12 @@ export class UserPage {
   goShare() {
     this.navCtrl.push(ShareCodePage, {})
   }
-  goLetterInto(){
+
+  goLetterInto() {
     this.navCtrl.push(LetterIntoPage, {})
   }
-  goLetterOut(){
+
+  goLetterOut() {
     this.navCtrl.push(LetterOutPage, {})
   }
 

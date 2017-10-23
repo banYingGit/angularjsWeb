@@ -59,7 +59,7 @@ export class LoginPage {
   }
 
   goIndex() {
-    // this.navCtrl.push(IndexPage);
+    this.navCtrl.push(UserPage);
   }
 
 

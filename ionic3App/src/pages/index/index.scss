@@ -40,7 +40,7 @@ page-index {
       .banner-img > img {
         display: block;
         width: 100%;
-        height: 230px;
+        height: auto;
       }
     }
     .floor-1 {
@@ -59,7 +59,7 @@ page-index {
           li {
             position: relative;
             width: 25%;
-            height: 75px;
+
             margin-bottom: 10px;
             display: block;
             float: left;
@@ -68,7 +68,7 @@ page-index {
             > img {
               display: block;
               width: 92%;
-              height: 75px;
+
               margin: 0 auto;
               border-radius: 5px;
             }
@@ -77,7 +77,7 @@ page-index {
               top: 50%;
               left: 50%;
               z-index: 2;
-              width: 30px;
+              width: 35px;
               height: 36px;
               margin: -18px 0 0 -15px;
               color: $color-f;
@@ -156,31 +156,33 @@ page-index {
           margin-top: -10px;
         }
       }
-      .list {
-        width: calc(100% + 2px);
-        height: 255px;
-        margin-left: 1px;
+      .list-one {
+        width: 100%;
+        @extend .clear;
 
+        border-top: solid 1px $color-c;
+        margin-top: -1px;
         > li {
           position: relative;
           width: 25%;
-          height: 85px;
           float: left;
           box-sizing: border-box;
-          border-top: solid 1px $color-c;
           border-right: solid 1px $color-c;
-          margin-top: -1px;
-          margin-left: -1px;
+          background: $color-f;
           &:nth-child(1) {
-            width: calc(50% - 1px);
-            height: 169px;
+            width: 50%;
+
           }
-          &:nth-child(3), &:nth-child(5), &:nth-child(9) {
-            border-right: none
+          &:nth-child(3), &:nth-child(5) {
+            border-right: none;
+
           }
-          &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9) {
-            border-bottom: solid 1px $color-c;
+
+          &:nth-child(4), &:nth-child(5) {
+            border-top: solid 1px $color-c;
+            margin-top: 1px;
           }
+
           > h3 {
             position: absolute;
             top: 10%;
@@ -197,18 +199,54 @@ page-index {
             color: $color-79;
           }
           > img {
-            position: absolute;
             display: block;
-            width: 80%;
+            width: 75%;
+            margin: 0 auto;
+          }
+        }
+      }
+      .list-two {
+        position: relative;
+        width: 100%;
+        @extend .clear;
+        border-bottom: solid 1px $color-c;
+        border-top: solid 1px $color-c;
+        top: -2px;
+        > li {
+          position: relative;
+          width: 25%;
+          float: left;
+          box-sizing: border-box;
+          border-right: solid 1px $color-c;
+
+          background: $color-f;
+
+          > h3 {
+            position: absolute;
+            top: 10%;
             left: 10%;
-            bottom: 0;
+            font-size: 14px;
+            line-height: 20px;
+          }
+          > h4 {
+            position: absolute;
+            top: 18%;
+            left: 10%;
+            font-size: 12px;
+            line-height: 20px;
+            color: $color-79;
+          }
+          > img {
+            display: block;
+            width: 75%;
+            margin: 0 auto;
           }
         }
       }
     }
     .floor-4 {
       width: 100%;
-      height: 360px;
+
       background: $color-f;
       margin-top: 15px;
       .tab-bar {
@@ -247,14 +285,14 @@ page-index {
       }
       .tab-card {
         width: 100%;
-        height: 320px;
+        padding: 20px 0;
         background: url("../../assets/icon/bg1.jpg") center no-repeat;
         background-size: 100% 100%;
 
         .tab-card-con {
           background: $color-f;
-          width: 95%;
-          height: 280px;
+          width: 100%;
+
           margin: 0 auto 0 auto;
           border-radius: 10px;
           padding-top: 15px;
@@ -302,12 +340,13 @@ page-index {
             }
             .photo {
               width: 95%;
-              height: 80px;
+              @extend .clear;
+              padding-bottom: 15px;
               margin: 15px auto 0 auto;
               > img {
                 display: block;
                 width: 29.3333%;
-                height: 80px;
+
                 margin: 0 2%;
                 float: left;
               }
@@ -322,7 +361,7 @@ page-index {
       width: 100%;
       > ul.list > li {
         width: 100%;
-        height: 340px;
+
         margin-top: 15px;
         background: $color-f;
         > .list-title {
@@ -356,11 +395,11 @@ page-index {
         > .photo {
           position: relative;
           width: 100%;
-          height: 240px;
+
           > img {
             display: block;
             width: 100%;
-            height: 240px;
+
           }
           > .note {
             position: absolute;
@@ -393,7 +432,7 @@ page-index {
         }
         > h5 {
           margin: 0 15px;
-          height: 20px;
+          height: 30px;
           font-size: 12px;
           color: $color-79;
           line-height: 20px;

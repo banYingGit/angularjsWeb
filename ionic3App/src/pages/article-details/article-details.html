@@ -20,9 +20,11 @@
   <ul class="recommendList" *ngIf="proList.length>0">
     <li *ngFor="let items of  proList" (click)="goDetail(items.id)">
       <img [src]="items.proImg" class="recommend-img"/>
-      <h2>{{items.title}}</h2>
-      <div class="recommend-info"><span class="price">￥{{items.price}}</span>
-        <span class="go-detail">查看详情</span>
+      <div class="text-box">
+        <h2>{{items.title}}</h2>
+        <div class="recommend-info"><span class="price">￥{{items.price}}</span>
+          <span class="go-detail">查看详情</span>
+        </div>
       </div>
     </li>
 

@@ -130,13 +130,13 @@ page-market {
   .main {
     .banner-img {
       width: 95%;
-      height: 200px;
+
       margin: 15px auto;
       text-align: center;
       > img {
         display: block;
         width: 100%;
-        height: 200px;
+
       }
     }
     .list {
@@ -146,7 +146,7 @@ page-market {
         display: block;
         float: left;
         width: 49%;
-        height: 250px;
+
         margin-bottom: 10px;
         background: $color-f;
         margin-left: 1%;
@@ -158,7 +158,7 @@ page-market {
         > .pic {
           display: block;
           width: 100%;
-          height: 185px;
+
         }
         > h4 {
           width: 100%;
@@ -171,7 +171,7 @@ page-market {
         }
         > .price {
           width: 100%;
-          height: 20px;
+          height: 30px;
           line-height: 20px;
           font-size: 14px;
           text-align: center;

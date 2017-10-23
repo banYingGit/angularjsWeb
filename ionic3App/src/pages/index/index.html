@@ -36,12 +36,14 @@
   <div class="floor-3 clear">
     <ion-title class="ui-title"><i> </i>唐朝好礼</ion-title>
     <div class="floor-3-title">精心推荐国礼 <i>... </i></div>
-    <ul class="list">
+    <ul class="list-one">
       <li><h3>高端馈赠</h3><h4>国礼巨匠诚心臻品</h4><img src="../../assets/icon/cur/img1.png"/></li>
       <li><h3>开业庆典</h3><img src="../../assets/icon/cur/img2.png"/></li>
       <li><h3>商务交流</h3><img src="../../assets/icon/cur/img3.png"/></li>
       <li><h3>佛缘善结</h3><img src="../../assets/icon/cur/img4.png"/></li>
       <li><h3>乔迁新居</h3><img src="../../assets/icon/cur/img5.png"/></li>
+    </ul>
+    <ul class="list-two">
       <li><h3>生日祝寿</h3><img src="../../assets/icon/cur/img6.png"/></li>
       <li><h3>吉庆旺财</h3><img src="../../assets/icon/cur/img7.png"/></li>
       <li><h3>增福增运</h3><img src="../../assets/icon/cur/img8.png"/></li>
@@ -59,7 +61,7 @@
 
     </div>
     <div class="tab-card">
-      <ion-slides autoplay="2000" loop parallax='true' slidesPerView="1.2" centeredSlides  spaceBetween="30"
+      <ion-slides autoplay="2000" loop parallax='true' slidesPerView="1.3" centeredSlides spaceBetween="30"
                   *ngIf="tabConData.length>0">
         <ion-slide *ngFor="let items of  tabConData">
           <div class="tab-card-con" (click)="goMasterPage(items.id)">
