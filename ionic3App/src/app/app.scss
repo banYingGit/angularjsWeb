@@ -100,33 +100,31 @@ h1, h2, h3, h4, h5, p, ul, li, i {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 90% 90%;
-    &.ion-ios-ui-index-outline {
+    &.ion-ios-ui-index-outline, &.ion-md-ui-index[ng-reflect-is-active="false"] {
       background-image: url("../assets/icon/index2.png");
     }
-    &.ion-ios-ui-index {
+    &.ion-ios-ui-index, &.ion-md-ui-index[ng-reflect-is-active="true"] {
       background-image: url("../assets/icon/index1.png");
     }
-    &.ion-ios-ui-market-outline {
+    &.ion-ios-ui-market-outline, &.ion-md-ui-market[ng-reflect-is-active="false"] {
       background-image: url("../assets/icon/market2.png");
     }
-    &.ion-ios-ui-market {
+    &.ion-ios-ui-market, &.ion-md-ui-market[ng-reflect-is-active="true"] {
       background-image: url("../assets/icon/market1.png");
     }
-    &.ion-ios-ui-car-outline {
+    &.ion-ios-ui-car-outline, &.ion-md-ui-car[ng-reflect-is-active="false"] {
       background-image: url("../assets/icon/car2.png");
     }
-    &.ion-ios-ui-car {
+    &.ion-ios-ui-car, &.ion-md-ui-car[ng-reflect-is-active="true"] {
       background-image: url("../assets/icon/car1.png");
     }
-    &.ion-ios-ui-my-outline {
+    &.ion-ios-ui-my-outline, &.ion-md-ui-my[ng-reflect-is-active="false"] {
       background-image: url("../assets/icon/my2.png");
     }
-    &.ion-ios-ui-my {
+    &.ion-ios-ui-my, &.ion-md-ui-my[ng-reflect-is-active="true"] {
       background-image: url("../assets/icon/my1.png");
     }
-    &.ion-ios-ui-made-outline {
 
-    }
   }
   .tab-button[aria-selected=true]    .tab-button-text {
     color: $color-3 !important;

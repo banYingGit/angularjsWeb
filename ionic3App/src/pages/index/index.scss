@@ -1,22 +1,25 @@
 
 page-index {
   .header {
-    .toolbar-background {
+    .ui-header {
+      width: 100%;
+      height: 45px;
       background: $color-default;
-      border: none !important;
+      text-align: center;
+      line-height: 45px;
+
     }
-    .toolbar-title {
+    img {
       height: 80%;
-      img {
-        height: 100%;
-      }
+      vertical-align: middle;
     }
+
     .search-icon {
-      height: 60%;
-      img {
-        height: 20px;
-        margin-right: 10px;
-      }
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      height: 25px;
+
     }
   }
   .content {
