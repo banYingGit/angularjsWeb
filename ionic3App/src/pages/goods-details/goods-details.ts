@@ -80,6 +80,9 @@ export class GoodsDetailsPage {
       position: 'middle'
     });
     toast.present();
+    this.isAddBox = false
+
+
   }
 
   goBack() {
