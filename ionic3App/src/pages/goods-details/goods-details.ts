@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams, LoadingController, ToastController} from 'ionic-angular';
-import{GoodsDetailsService} from './goods-details.service'
+import {GoodsDetailsService} from './goods-details.service'
 import {MarketMakePage} from '../market-make/market-make';
 import {GoodsEvaluatePage} from '../goods-evaluate/goods-evaluate';
 import {GoodsPropertyPage} from '../goods-property/goods-property';
@@ -17,14 +17,16 @@ export class GoodsDetailsPage {
   slideList = [];
   title = '';
   price = '';
-  num = '';
+  num = '1';
   type = '';
   spec = '';
   material = '';
   color = '';
   brand = '';
   production = '';
-  detail = {}
+  detail = {};
+  isAddBox = false;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public goodsDetailsService: GoodsDetailsService, public loadingCtrl: LoadingController, public toastCtrl: ToastController) {
 
@@ -80,7 +82,7 @@ export class GoodsDetailsPage {
     toast.present();
   }
 
-  goBack(){
+  goBack() {
     this.navCtrl && this.navCtrl.pop(null, null);
   }
 

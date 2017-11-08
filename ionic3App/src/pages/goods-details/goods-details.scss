@@ -230,5 +230,120 @@ page-goods-details {
       }
     }
   }
+  .add-pop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: $mask-b-6;
+    .add-box {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      bottom: 0;
+      left: 0;
+      padding-top: 45px;
+      background: $color-f;
+      .add-img {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: -20px;
+        left: 20px;
+        border: solid 2px $color-f0;
+      }
+      .add-pricee {
+        position: absolute;
+        height: 40px;
+        line-height: 40px;
+        top: 0;
+        left: 90px;
+        font-size: 16px;
+        color: $color-auxiliary;
+        font-weight: bold;
+      }
+      .close {
+        position: absolute;
+        height: 20px;
+        top: 10px;
+        right: 20px;
+        opacity: 0.7;
+      }
+      .title {
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        padding: 0 20px;
+      }
+      .list {
+        margin: 0 0 0 20px;
+        @extend .clear;
+        .item {
+          padding: 0;
+          width: 100px;
+          float: left;
+          border: none;
+          .item-inner {
+            border: none;
+            height: 35px;
+            .input-wrapper {
+              height: 35px;
+            }
+          }
+        }
+        .item-radio {
+          min-height: 40px;
+          .label {
+            margin: 0;
+            height: 35px;
+            line-height: 35px;
+            border-radius: 3px;
+            text-align: center;
+            background: $color-f;
+            border: solid 1px $color-default;
+            font-size: 14px;
+          }
 
+        }
+
+        .item-radio-checked {
+          .label {
+            color: $color-f;
+            background: $color-default;
+          }
+          .radio-checked {
+            display: none;
+          }
+        }
+        .radio {
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          margin: 0;
+        }
+      }
+      .num-box {
+        margin: 0 0 20px 20px;
+      }
+      .button {
+        display: block;
+        width: 100%;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        text-align: center;
+        line-height: 40px;
+        color: $color-f;
+        background: $color-default;
+
+      }
+    }
+  }
 }

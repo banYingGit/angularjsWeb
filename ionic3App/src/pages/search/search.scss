@@ -1,0 +1,64 @@
+page-search {
+  .ui-header {
+    position: relative;
+    height: 45px;
+    padding-top: 8px;
+    background: $color-f;
+    border-bottom: solid 1px $color-d;
+    > .search-box {
+      position: relative;
+      width: 80%;
+      height: 28px;
+      margin: 0 0 0 15px;
+      border-radius: 17px;
+      background: $color-f0;
+      > .search {
+        position: absolute;
+        top: 6px;
+        left: 10px;
+        height: 17px;
+      }
+      .input{
+        padding-left: 40px;
+      }
+      .text-input {
+        height: 20px;
+        margin:4px 0 0 0;
+
+      }
+    }
+
+    > .right-btn {
+      position: absolute;
+      height: 25px;
+      top: 10px;
+      right: 15px;
+      line-height: 25px;
+      color: $color-default;
+      font-size: 14px;
+    }
+  }
+  .se-title {
+    margin-top: 10px;
+    padding: 0 15px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    color: $color-79;
+  }
+  .se-list {
+    padding-right: 15px;
+    > li {
+      margin: 0 0 10px 15px;
+      height: 25px;
+      float: left;
+      padding: 0 15px;
+      line-height: 25px;
+      font-size: 12px;
+      border-radius: 5px;
+      background: $color-f0;
+      color: $color-3;
+    }
+    @extend .clear
+  }
+}

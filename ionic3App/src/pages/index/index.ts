@@ -4,7 +4,7 @@ import {Slides} from 'ionic-angular';
 import {NewsListPage} from '../news-list/news-list';
 import {ChannelListPage} from '../channel-list/channel-list';
 import {MasterDetailsPage} from '../master-details/master-details';
-
+import {SearchPage} from '../search/search';
 import 'rxjs/Rx';
 import {IndexService} from './index.service';
 
@@ -120,7 +120,9 @@ export class IndexPage {
   goNewsPage(id) {
     this.navCtrl.push(NewsListPage, id);
   }
-
+  goSearch(){
+    this.navCtrl.push(SearchPage);
+  }
   goChannelPage(id) {
     this.navCtrl.push(ChannelListPage, id);
   }

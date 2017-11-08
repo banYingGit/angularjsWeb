@@ -90,8 +90,29 @@
     <div class="button-left"><p><img src="../../assets/icon/s_icon5.png"/></p>
       <p><img src="../../assets/icon/s_icon6.png"/></p></div>
     <div class="button-right">
-      <button ion-button (click)="addCar()">加入购物车</button>
+      <button ion-button (click)="isAddBox=true">加入购物车</button>
       <button ion-button>立即购买</button>
+    </div>
+  </div>
+  <div class="add-pop" *ngIf="isAddBox">
+    <div class="add-box">
+      <img src="../../assets/icon/cur/img12.jpg" class="add-img"/>
+      <div class="add-pricee">￥1886</div>
+      <img src="../../assets/icon/close.png" class="close" (click)="isAddBox=false"/>
+      <div class="title">规格</div>
+      <ion-list radio-group [(ngModel)]="purpose">
+        <ion-item>
+          <ion-label class="male">自用</ion-label>
+          <ion-radio value="purpose1"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label class="female">赠人</ion-label>
+          <ion-radio value="purpose2"></ion-radio>
+        </ion-item>
+      </ion-list>
+      <div class="title">数量</div>
+      <number-box [(ngModel)]='num'></number-box>
+      <button ion-button (click)="addCar()">确定</button>
     </div>
   </div>
 </ion-content>
