@@ -49,6 +49,7 @@ import {LetterOutPage} from '../pages/letter-out/letter-out';
 import {LetterIntoPage} from '../pages/letter-into/letter-into';
 import {EvaluatePage} from '../pages/evaluate/evaluate';
 import {SearchPage} from '../pages/search/search';
+import {WithdrawalsPage} from '../pages/withdrawals/withdrawals';
 
 /*service*/
 import {IndexService} from '../pages/index/index.service';
@@ -117,6 +118,7 @@ import {UiHeaderComponent} from '../components/ui-header/ui-header';
     LetterIntoPage,
     EvaluatePage,
     SearchPage,
+    WithdrawalsPage,
     NumberBoxComponent,
     UiHeaderComponent
   ],
@@ -166,6 +168,7 @@ import {UiHeaderComponent} from '../components/ui-header/ui-header';
     LetterIntoPage,
     EvaluatePage,
     SearchPage,
+    WithdrawalsPage
   ],
   providers: [
     StatusBar,
