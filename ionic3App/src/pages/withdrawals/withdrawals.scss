@@ -1,3 +1,60 @@
 page-withdrawals {
+  .content {
+    background: $color-f0;
+  }
+  .panel {
+    background: $color-f;
+    margin: 10px 0 60px 0;
+    > .list {
+      padding: 10px 0;
+      > li {
+        position: relative;
+        padding: 10px 0 10px 0;
+        margin-left: 15px;
+        border-bottom: solid 1px $color-f0;
+        &:nth-last-child(1) {
+          border: none;
+        }
+        .title {
+          line-height: 20px;
+          font-size: 14px;
+          color: $color-3;
+        }
+        .time {
+          line-height: 20px;
+          font-size: 12px;
+          color: $color-79;
+        }
+        .price {
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 14px;
+          color: $color-auxiliary;
+        }
+      }
+    }
+  }
+  .foot-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
 
+    .button {
+      display: block;
+      padding: 0;
+
+      width: 100%;
+      height: 50px;
+      background: $color-default;
+      color: $color-f;
+      .button-inner {
+        font-size: 15px;
+      }
+    }
+  }
 }

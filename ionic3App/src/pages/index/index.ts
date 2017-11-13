@@ -5,6 +5,8 @@ import {NewsListPage} from '../news-list/news-list';
 import {ChannelListPage} from '../channel-list/channel-list';
 import {MasterDetailsPage} from '../master-details/master-details';
 import {SearchPage} from '../search/search';
+
+import {WithdrawalsPage} from '../withdrawals/withdrawals';
 import 'rxjs/Rx';
 import {IndexService} from './index.service';
 
@@ -120,9 +122,11 @@ export class IndexPage {
   goNewsPage(id) {
     this.navCtrl.push(NewsListPage, id);
   }
-  goSearch(){
+
+  goSearch() {
     this.navCtrl.push(SearchPage);
   }
+
   goChannelPage(id) {
     this.navCtrl.push(ChannelListPage, id);
   }
@@ -130,5 +134,10 @@ export class IndexPage {
   goMasterPage(id) {
     this.navCtrl.push(MasterDetailsPage, id)
 
+  }
+
+  goPage1() {
+
+    this.navCtrl.push(WithdrawalsPage)
   }
 }

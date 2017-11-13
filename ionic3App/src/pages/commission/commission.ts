@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams, LoadingController} from 'ionic-angular';
-import {CommissionPage} from '../commission/commission';
+
 /**
- * Generated class for the WithdrawalsPage page.
+ * Generated class for the CommissionPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,15 +10,25 @@ import {CommissionPage} from '../commission/commission';
 
 @IonicPage()
 @Component({
-  selector: 'page-withdrawals',
-  templateUrl: 'withdrawals.html',
+  selector: 'page-commission',
+  templateUrl: 'commission.html',
 })
-export class WithdrawalsPage {
+export class CommissionPage {
+
   loading: any;
   headerData = {
     "title": '佣金明细',
-    "isGoBack": true
+    "isGoBack": true,
+    "isShowRight": true,
+    "btnText": "筛选",
+    "btnFn": function () {
+
+    }
   };
+  isSearch = false
+  YDate = ''
+  MDate = ''
+  DDate = ''
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
 
@@ -26,10 +36,13 @@ export class WithdrawalsPage {
   }
 
   ionViewDidLoad() {
+    var $this=this
     this.loading.present();
     this.loading.dismiss();
+    this.headerData.btnFn = function () {
+      $this.isSearch = true
+    }
+
   }
-  goPage2(){
-    this.navCtrl.push(CommissionPage)
-  }
+
 }
